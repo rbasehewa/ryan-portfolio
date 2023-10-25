@@ -55,7 +55,6 @@
 }
 
 .heroImg {
-
     width: 50%;
     z-index: 1;
 
@@ -81,7 +80,6 @@
 }
 
 .topBlur {
-
     position: absolute;
     width: 50vw;
     height: 50vw;
@@ -96,7 +94,6 @@
 }
 
 .bottomBlur {
-
     position: absolute;
     width: 70vw;
     height: 50vw;
@@ -112,11 +109,11 @@
 
 @media screen and (max-width: 830px){
 
-    .container{
+    .container {
         flex-direction: column-reverse;
     }
 
-    .content{
+    .content {
         align-items: center;
     }
     
