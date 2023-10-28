@@ -6,14 +6,12 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
         <div className={styles.content}>
-            <h1 className={styles.title}>HI, I'm Ryan Maddumahewa</h1>
-            <p className={styles.description}>I'm a full-stack developer with a passion for creating interactive applications and user experiences on the web.</p>
-            <p className={styles.description}>With a background in computer science and hands-on experience working with APIs, templates, and responsive design, I have the technical skills and creative vision to bring even the most complex projects to life. </p> 
-            <p className={styles.description}>When I'm not coding, you'll find me hiking, playing video games, or trying out new recipes in the kitchen. I believe in the power of continuous learning and am always seeking new challenges and opportunities to grow as a developer and as a person.</p>
-            <p className={styles.description}>Thank you for visiting my portfolio! I look forward to the opportunity to bring my passion and expertise to your next project.</p>
+            <h1 className={styles.title}>Ryan Maddumahewa</h1>
+            <p className={styles.description}>Hello, I'm Ryan, a full-stack developer who loves creating outstanding web experiences. I'm a dedicated and passionate developer with over 5 years of experience in the field. This portfolio features my carefully crafted web projects, demonstrating my dedication to responsive design, interactive apps, and creative interfaces.</p>
+            <p className={styles.description}>Explore the projects, and feel free to reach out if you have any questions or if you'd like to discuss potential collaborations. Thanks for stopping by!</p> 
             <a href="mailto:rbasehewa@gmail.com" className={styles.contactBtn}>shoot me an email!!!</a>
         </div>
-        <img src={getImageUrl("hero/heroImage.png")} 
+        <img src={getImageUrl("hero/myImage.png")} 
         alt="rbasehewa" 
         className={styles.heroImg}
         />

@@ -4,7 +4,7 @@
       "organisation": "Vocus",
       "startDate": "Oct, 2021",
       "endDate": "Present",
-      "experiences": ["Implemented responsive web design using HTML, CSS, and JavaScript", "Improved website performance by applying best practices, including the BEM approach, NGRX store, and Redux store"],
+      "experiences": ["Implemented responsive web design using HTML, CSS, JavaScript, Angular, and React.", "Utilized NGRX store and Redux store to enhance user experiences."],
       "imageSrc": "history/vocus.png"
     },
     {
@@ -12,7 +12,7 @@
       "organisation": "I-Tech You-Learn",
       "startDate": "May, 2019",
       "endDate": "Oct, 2021",
-      "experiences": ["Microsoft C# and the .NET platform", "Conducted thorough unit testing using Jasmine and Karma"],
+      "experiences": ["Developed solutions using Microsoft C# and the .NET platform.", "Conducted thorough unit testing using Jasmine and Karma."],
       "imageSrc": "history/itechyoulearn.png"
     },
     {
@@ -21,8 +21,8 @@
       "startDate": "Jan, 2019",
       "endDate": "Aug, 2019",
       "experiences": [
-        "Laravel framework with PHP, HTML5, SCSS, JQuery, and AJAX, providing high-quality user experiences",
-        "Integrated with a variety of RESTful APIs"
+        "Laravel framework with PHP, HTML5, SCSS, JQuery, and AJAX, providing high-quality user experiences.",
+        "Integrated with a variety of RESTful APIs for seamless functionality."
       ],
       "imageSrc": "history/enee.png"
     }

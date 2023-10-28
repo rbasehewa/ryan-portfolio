@@ -16,12 +16,20 @@
       "imageSrc": "skills/node.png"
     },
     {
-      "title": "GraphQL",
-      "imageSrc": "skills/graphql.png"
+      "title": "Angular",
+      "imageSrc": "skills/angular.png"
+    },
+    {
+      "title": "Laravel",
+      "imageSrc": "skills/laravel.png"
     },
     {
       "title": "MongoDB",
       "imageSrc": "skills/mongodb.png"
+    },
+    {
+      "title": ".NET",
+      "imageSrc": "skills/net.png"
     },
     {
       "title": "Figma",
