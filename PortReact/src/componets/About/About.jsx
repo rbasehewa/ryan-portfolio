@@ -8,31 +8,37 @@ export const About = () => {
   <section className={styles.container} id="about">
     <h2 className={styles.title}>About</h2>
     <div className={styles.content}>
-        <img src={getImageUrl("about/aboutImage.png")} alt="Simply about me" className={styles.aboutImage} />
+        <img src={getImageUrl("about/aboutme.png")} alt="Simply about me" className={styles.aboutImage} />
         <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}>
                 <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
                 <div className={styles.aboutItemText}>
-                    <h3>Frontend Developer, Digital team – Vocus Group</h3>
-                    <p>Developed and maintained dynamic and interactive user interfaces, using JavaScript frameworks such as React and Angular.</p>
-                    <p>Implemented responsive web design using HTML, CSS, and JavaScript, resulting in a consistent user experience across all devices.</p>
+                    <h3>Professional Journey at Vocus Group</h3>
+                    <p>My journey began as a Frontend Developer in the Digital team at Vocus Group, where I honed my skills and developed a strong commitment to crafting remarkable web experiences.</p>
                 </div>
             </li>
             <li className={styles.aboutItem}>
                 <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
                 <div className={styles.aboutItemText}>
-                    <h3>Software Developer, ITechYouLearn Software Development Company, Adelaide</h3>
-                    <p>Utilized Microsoft C# and the .NET platform to design, develop, and maintain responsive websites and web applications.</p>
-                    <p>Leveraged AWS Cloud offerings, including Lambda, EC2, DynamoDB, and S3, to develop and deploy scalable and efficient web applications and services.</p>
+                    <h3>Experience at ITechYouLearn</h3>
+                    <p>Prior to that, I had the opportunity to work as a Software Developer at ITechYouLearn Software Development Company in Adelaide.</p>
+                    <p>It was here that I gained valuable insights and experience, which further fueled my passion for web development.</p>
                 </div>
             </li>
             <li className={styles.aboutItem}>
                 <img src={getImageUrl("about/uiIcon.png")} alt="UI icon" />
                 <div className={styles.aboutItemText}>
-                    <h3>Assistant Web Developer</h3>
-                    <p>Built and maintained a variety of dynamic web applications using Laravel framework with PHP, HTML5, SCSS, JQuery, and AJAX, providing high-quality user experiences and improving business efficiency.</p>
-                    <p>Integrated with a variety of RESTful APIs to provide dynamic, up-to-date content to the website, enhancing user engagement and satisfaction.</p>
-                    <p>Managed code versioning and collaboration using Git and GitHub, ensuring that development progress is tracked and easily accessible to the team.</p>
+                    <h3>Early Web Development Days</h3>
+                    <p>My journey started as an Assistant Web Developer, and with each role, I've had the privilege of learning and growing, which has contributed to my ability to deliver outstanding web solutions.</p>
+                </div>
+            </li>
+
+            <li className={styles.aboutItem}>
+                <img src={getImageUrl("about/social.png")} alt="Social icon" />
+
+                <div className={styles.aboutItemText}>
+                        <h3>Life Beyond the Code</h3>
+                        <p>In my free time, I'm an outdoor enthusiast, a gaming enthusiast, and a passionate cook. I love learning and tackling new challenges..</p>
                 </div>
             </li>
         </ul>

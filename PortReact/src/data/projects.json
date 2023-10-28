@@ -1,26 +1,26 @@
 [
     {
-      "title": "Project A",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "Shopping cart",
+      "imageSrc": "projects/project1.png",
+      "description": "Simple Shopping cart using NgrX store, Angular 12 with Dynamic JSON file.",
+      "skills": ["HTML5", "CSS", "Javascript", "Angular", "Ngrx"],
+      "demo": "https://github.com/rbasehewa/ShoppingCart",
+      "source": "https://github.com/rbasehewa/ShoppingCart"
     },
     {
-      "title": "Project B",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node", "Sass"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "Happy Merging",
+      "imageSrc": "projects/project2.png",
+      "description": "This project is easy to use for combine multiple PDF into a single document.",
+      "skills": ["HTML5", "CSS", "Express", "Node", "jquery"],
+      "demo": "https://github.com/rbasehewa/Merge-PDF",
+      "source": "https://github.com/rbasehewa/Merge-PDF"
     },
     {
-      "title": "Project C",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "Portfoilo",
+      "imageSrc": "projects/project3.png",
+      "description": "My personal portfolio showcasing my work and skills in React and Javascript.",
+      "skills": ["React", "Javascript", "CSS", "HTML5"],
+      "demo": "https://github.com/rbasehewa/ryan-portfolio",
+      "source": "https://github.com/rbasehewa/ryan-portfolio"
     }
   ]
