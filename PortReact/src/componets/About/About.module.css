@@ -13,6 +13,7 @@
 
 .title {
     color: var(--color-text);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1.75px;
@@ -60,6 +61,7 @@
 .aboutItem h3 {
     font-size: 25px;
     font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .aboutItem p {
