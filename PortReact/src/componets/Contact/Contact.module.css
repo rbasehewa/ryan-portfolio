@@ -17,6 +17,7 @@
     font-size: 80px;
     font-weight: 700;
     letter-spacing: 4px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .text p {
@@ -50,18 +51,45 @@
 @media screen and (max-width: 830px) {
     .container {
         flex-direction: column;
-        gap: 23px;
+        gap: 20px; 
+        padding: 10px 5%; 
+    }
+
+    .text h2 {
+        text-align: center;
+        font-size: 28px; 
+        margin-top: 10px; 
+        margin-bottom: 5px; 
+    }
+
+    .text p {
+        text-align: center;
+        font-size: 18px; 
     }
 
     .text {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 15px; 
     }
 
     .links {
         align-items: center;
+        gap: 10px; 
+        flex-flow: wrap;
     }
-    
-}
 
+    .link {
+        gap: 10px; 
+    }
+
+    .link img {
+        max-width: 40px;  /* Adjust icon sizes for mobile */
+        height: auto;
+    }
+
+    .link a {
+        font-size: 20px; 
+    }
+}
