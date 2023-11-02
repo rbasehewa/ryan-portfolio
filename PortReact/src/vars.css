@@ -5,8 +5,10 @@
     --color-secondary: #19376d;
     --color-dark: #0b2447;
     --color-bg: #3AE8BF;
+    --color-font-des : #F7F8F9;
 
     /* Fonts */
 
     --font-roboto: "Roboto";
+    --font-outfit: "Outfit";
 }

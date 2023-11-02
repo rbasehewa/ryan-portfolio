@@ -40,6 +40,8 @@
 .description {
     font-size: 30px;
     font-family: var(--font-roboto);
+    text-align: left;
+    text-justify: inter-word;
     margin-bottom: 52px;
 }
 
