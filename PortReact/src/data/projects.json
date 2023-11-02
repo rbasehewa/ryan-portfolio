@@ -3,7 +3,7 @@
       "title": "Shopping cart",
       "imageSrc": "projects/project1.png",
       "description": "Simple Shopping cart using NgrX store, Angular 12 with Dynamic JSON file.",
-      "skills": ["HTML5", "CSS", "Javascript", "Angular", "Ngrx"],
+      "skills": ["HTML5", "SASS", "Javascript", "Angular", "Ngrx"],
       "demo": "https://github.com/rbasehewa/ShoppingCart",
       "source": "https://github.com/rbasehewa/ShoppingCart"
     },
@@ -19,7 +19,7 @@
       "title": "Portfoilo",
       "imageSrc": "projects/project3.png",
       "description": "My personal portfolio showcasing my work and skills in React and Javascript.",
-      "skills": ["React", "Javascript", "CSS", "HTML5"],
+      "skills": ["React", "Typescript", "CSS", "HTML5","GIT"],
       "demo": "https://github.com/rbasehewa/ryan-portfolio",
       "source": "https://github.com/rbasehewa/ryan-portfolio"
     }

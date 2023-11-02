@@ -5,15 +5,15 @@
       "startDate": "Oct, 2021",
       "endDate": "Present",
       "experiences": ["Implemented responsive web design using HTML, CSS, JavaScript, Angular, and React.", "Utilized NGRX store and Redux store to enhance user experiences."],
-      "imageSrc": "history/vocus.png"
+      "imageSrc": "history/logo-vocus.png"
     },
     {
-      "role": "Software Developer",
-      "organisation": "I-Tech You-Learn",
+      "role": "SWE Developer",
+      "organisation": "I-Tech",
       "startDate": "May, 2019",
       "endDate": "Oct, 2021",
       "experiences": ["Developed solutions using Microsoft C# and the .NET platform.", "Conducted thorough unit testing using Jasmine and Karma."],
-      "imageSrc": "history/itechyoulearn.png"
+      "imageSrc": "history/logo-itechyoulearn.png"
     },
     {
       "role": "SWE Intern",
@@ -24,6 +24,6 @@
         "Laravel framework with PHP, HTML5, SCSS, JQuery, and AJAX, providing high-quality user experiences.",
         "Integrated with a variety of RESTful APIs for seamless functionality."
       ],
-      "imageSrc": "history/enee.png"
+      "imageSrc": "history/logo-enee.png"
     }
   ]
