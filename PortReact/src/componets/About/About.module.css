@@ -62,11 +62,13 @@
 .aboutItem h3 {
     font-size: 25px;
     font-weight: 600;
+    font-family: var(--font-roboto);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .aboutItem p {
     font-size: 25px;
+    font-family: var(--font-roboto);
     color: var(--color-font-des);
 }
 

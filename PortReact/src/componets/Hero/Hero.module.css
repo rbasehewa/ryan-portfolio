@@ -48,6 +48,7 @@
 .contactBtn {
 
     text-decoration: none;
+    font-family: var(--font-roboto);
     background-color: var(--color-primary);
     color: var(--color-text);
     border-radius: 100px;
@@ -130,13 +131,14 @@
     }
 
     .description {
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 20px;
         color: #073D39;
     }
 
     .contactBtn {
         font-size: 20px;
+        font-family: var(--font-roboto);
         padding: 10px 20px;
     }
 
