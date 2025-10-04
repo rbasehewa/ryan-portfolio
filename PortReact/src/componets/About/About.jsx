@@ -13,23 +13,23 @@ export const About = () => {
             <li className={styles.aboutItem}>
                 <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
                 <div className={styles.aboutItemText}>
-                    <h3>Professional Journey at Vocus Group</h3>
-                    <p>My journey began as a Frontend Developer in the Digital team at Vocus Group, where I honed my skills and developed a strong commitment to crafting remarkable web experiences.</p>
+                    <h3>Professional Journey at Ocean Health Systems</h3>
+                    <p>I currently work as a Frontend Developer at Ocean Health Systems, where I build modern Angular applications that simplify healthcare workflows and enhance user experiences across web and mobile platforms.</p>
                 </div>
             </li>
             <li className={styles.aboutItem}>
                 <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
                 <div className={styles.aboutItemText}>
-                    <h3>Experience at ITechYouLearn</h3>
-                    <p>Prior to that, I had the opportunity to work as a Software Developer at ITechYouLearn Software Development Company in Adelaide.</p>
-                    <p>It was here that I gained valuable insights and experience, which further fueled my passion for web development.</p>
+                    <h3>Experience at Vocus Group</h3>
+                    <p>Before joining Ocean Health Systems, I worked as a Frontend Developer in the Digital Team at Vocus Group, contributing to the Dodo and iPrimus products.</p>
+                    <p>My time there strengthened my technical and creative skills in crafting customer-focused web experiences within a large enterprise environment.</p>
                 </div>
             </li>
             <li className={styles.aboutItem}>
                 <img src={getImageUrl("about/uiIcon.png")} alt="UI icon" />
                 <div className={styles.aboutItemText}>
                     <h3>Early Web Development Days</h3>
-                    <p>My journey started as an Assistant Web Developer, and with each role, I've had the privilege of learning and growing, which has contributed to my ability to deliver outstanding web solutions.</p>
+                    <p>I began my career as a Software Developer at ITechYouLearn in Adelaide, gaining valuable experience and a strong foundation in building scalable and responsive web solutions.</p>
                 </div>
             </li>
 
@@ -38,7 +38,7 @@ export const About = () => {
 
                 <div className={styles.aboutItemText}>
                         <h3>Life Beyond the Code</h3>
-                        <p>In my free time, I'm an outdoor enthusiast, a gaming enthusiast, and a passionate cook. I love learning and tackling new challenges..</p>
+                        <p>Outside of work, I enjoy spending time outdoors, gaming, and experimenting with new recipes. I’m always eager to learn and take on new challenges.</p>
                 </div>
             </li>
         </ul>
