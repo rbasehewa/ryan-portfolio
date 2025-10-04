@@ -1,29 +1,47 @@
 [
-    {
-      "role": "Frontend Developer",
-      "organisation": "Vocus",
-      "startDate": "Oct, 2021",
-      "endDate": "Present",
-      "experiences": ["Implemented responsive web design using HTML, CSS, JavaScript, Angular, and React.", "Utilized NGRX store and Redux store to enhance user experiences."],
-      "imageSrc": "history/logo-vocus.png"
-    },
-    {
-      "role": "SWE Developer",
-      "organisation": "I-Tech",
-      "startDate": "May, 2019",
-      "endDate": "Oct, 2021",
-      "experiences": ["Developed solutions using Microsoft C# and the .NET platform.", "Conducted thorough unit testing using Jasmine and Karma."],
-      "imageSrc": "history/logo-itechyoulearn.png"
-    },
-    {
-      "role": "SWE Intern",
-      "organisation": "Enee Solution",
-      "startDate": "Jan, 2019",
-      "endDate": "Aug, 2019",
-      "experiences": [
-        "Laravel framework with PHP, HTML5, SCSS, JQuery, and AJAX, providing high-quality user experiences.",
-        "Integrated with a variety of RESTful APIs for seamless functionality."
-      ],
-      "imageSrc": "history/logo-enee.png"
-    }
-  ]
+  {
+    "role": "Frontend Developer",
+    "organisation": "Ocean Health Systems",
+    "startDate": "Jul, 2024",
+    "endDate": "Present",
+    "experiences": [
+      "Build the Immuniser Angular SPA (v17+) with PrimeNG, RxJS, and Formly to streamline healthcare workflows.",
+      "Integrated Australian Immunisation Register (AIR) features including device activation, catch-up schedules, and record retrieval.",
+      "Improved performance and UX with lazy loading, skeleton states, and Playwright end-to-end tests."
+    ],
+    "imageSrc": "history/logo-ohs.png"
+  },
+  {
+    "role": "Frontend Developer",
+    "organisation": "Vocus (Dodo & iPrimus)",
+    "startDate": "Oct, 2021",
+    "endDate": "Jun, 2024",
+    "experiences": [
+      "Implemented responsive web design using HTML, CSS, JavaScript, Angular, and React.",
+      "Delivered features for Dodo and iPrimus customer portals with Redux/NGRX state management to enhance user experiences."
+    ],
+    "imageSrc": "history/logo-vocus.png"
+  },
+  {
+    "role": "SWE Developer",
+    "organisation": "I-Tech",
+    "startDate": "May, 2019",
+    "endDate": "Oct, 2021",
+    "experiences": [
+      "Developed solutions using Microsoft C# and the .NET platform.",
+      "Conducted thorough unit testing using Jasmine and Karma."
+    ],
+    "imageSrc": "history/logo-itechyoulearn.png"
+  },
+  {
+    "role": "SWE Intern",
+    "organisation": "Enee Solution",
+    "startDate": "Jan, 2019",
+    "endDate": "Aug, 2019",
+    "experiences": [
+      "Laravel framework with PHP, HTML5, SCSS, JQuery, and AJAX, providing high-quality user experiences.",
+      "Integrated with a variety of RESTful APIs for seamless functionality."
+    ],
+    "imageSrc": "history/logo-enee.png"
+  }
+]
