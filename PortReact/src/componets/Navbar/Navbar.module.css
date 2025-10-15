@@ -10,6 +10,13 @@
     margin: 0 10%;
 }
 
+.navIcon {
+  margin-right: 8px;
+  inline-size: 1em;     /* keep width consistent */
+  vertical-align: -0.05em;
+  opacity: .95;
+}
+
 .title {
     font-size: 27px;
     font-weight: 600;
@@ -17,6 +24,17 @@
     color: var(--color-text);
     font-family: var(--font-roboto);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  display: block;              /* <-- key line */
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  opacity: .85;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  letter-spacing: .2px;
 }
 
 .menu {
@@ -30,7 +48,7 @@
 }
 
 .menuItems a {
-    font-size: 20px;
+    font-size: 25px;
     font-family: var(--font-roboto);
     color: var(--color-text);
     text-decoration: none;
@@ -83,10 +101,37 @@
         display: flex;
         z-index: 1;
     }
+    .brand{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandWrap {
+  display: inline-flex;       /* stays sized to the text */
+  flex-direction: column;     /* title on top, subtitle below */
+  align-items: flex-start;    /* left aligned like before */
+  line-height: 1.1;
+}
+
+
+.subtitle{
+  margin-top: 4px;                 /* tucks under the title */
+  font-size: 14px;
+  font-weight: 500;
+    display: block;               /* forces it to start on a new line */
+  margin-top: 4px;              /* small breathing space */
+  color: var(--color-text);
+  opacity: .85;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.2);
+  letter-spacing: .2px;
+}
 }
 
 @media screen and (min-width: 831px) {
     .menuBtn {
         display: none;
     }
+      .brand{ align-items: flex-start; }
+  .subtitle{ font-size: 12px; opacity: .9; }
 }

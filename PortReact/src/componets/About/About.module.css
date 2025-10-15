@@ -5,7 +5,8 @@
     background-color: rgba(12, 12, 12, 0.6);
     border-radius: 15px;
     padding: 73px;
-    margin-top: 25px;
+    margin-top: 0;
+    padding-top: 0;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
@@ -17,8 +18,37 @@
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1.75px;
+    margin-top: 0;
+    padding-top: 10px;
     text-transform: uppercase;
 }
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+    /* vertical align */
+    gap: 10px;
+    /* space between circle and text */
+}
+
+.iconWrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .12);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 48px;
+    /* keep circle from shrinking */
+}
+
+.itemTitle {
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
 
 .content {
     display: flex;
@@ -38,22 +68,39 @@
 }
 
 .aboutItem {
-    display: flex;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    column-gap: 12px;
+    align-items: start;
     flex-direction: row;
     font-family: var(--font-roboto);
     align-items: center;
     border-radius: 20px;
     list-style: none;
     padding: 25px;
-    background-image: linear-gradient(
-        90deg,
-        rgba(165, 215, 232, 0.42) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background-image: linear-gradient(90deg,
+            rgba(165, 215, 232, 0.42) 0%,
+            rgba(255, 255, 255, 0) 100%);
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: 0.4s;
 }
+
+/* applies to the text blocks under each item */
+.aboutItemText p {
+    text-align: justify;
+    /* full-justify both sides */
+    text-justify: inter-word;
+    /* better word spacing (where supported) */
+    text-align-last: left;
+    /* keep the last line left-aligned */
+    line-height: 1.55;
+    /* improves readability when justified */
+    max-width: 60ch;
+    /* optional: keeps line length comfortable */
+    grid-column: 2;
+}
+
 
 .aboutItem:hover {
     background-size: 100% 100%;
@@ -73,13 +120,15 @@
 }
 
 @media screen and (max-width: 830px) {
-    
 
-    .container  {
+
+    .container {
         background-color: transparent;
         padding-left: 0;
         padding-right: 0
-    };
+    }
+
+    ;
 
     .content {
         flex-direction: column;

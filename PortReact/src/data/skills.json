@@ -19,6 +19,7 @@
       "title": "Angular",
       "imageSrc": "skills/angular.png"
     },
+      { "title": "Azure", "imageSrc": "skills/azure.png" },
     {
       "title": "Laravel",
       "imageSrc": "skills/laravel.png"
@@ -34,5 +35,12 @@
     {
       "title": "Figma",
       "imageSrc": "skills/figma.png"
-    }
+    },
+      { "title": "Databricks", "imageSrc": "skills/databricks.png" },
+  { "title": "PostgreSQL", "imageSrc": "skills/postgresql.png" },
+
+  { "title": "GraphQL", "imageSrc": "skills/graphql.png" },
+    { "title": "Salesforce", "imageSrc": "skills/salesforce.png" },
+  { "title": "PrimeNG", "imageSrc": "skills/primeng.png" },
+  { "title": "GraphQL", "imageSrc": "skills/aws.png" }
   ]

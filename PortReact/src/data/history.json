@@ -2,46 +2,49 @@
   {
     "role": "Frontend Developer",
     "organisation": "Ocean Health Systems",
-    "startDate": "Jul, 2024",
+    "startDate": "Oct 2023",
     "endDate": "Present",
+    "summary": "Frontend Developer delivering secure Angular-based solutions for healthcare workflows, ensuring accessibility and data confidentiality.",
+    "techStack": "Angular 17+, PrimeNG, Formly, RxJS, .NET API, Azure, Auth0, Playwright",
     "experiences": [
-      "Build the Immuniser Angular SPA (v17+) with PrimeNG, RxJS, and Formly to streamline healthcare workflows.",
-      "Integrated Australian Immunisation Register (AIR) features including device activation, catch-up schedules, and record retrieval.",
-      "Improved performance and UX with lazy loading, skeleton states, and Playwright end-to-end tests."
+      "Built the Immuniser Angular SPA (v17+) with PrimeNG, Formly, and RxJS to streamline clinical workflows.",
+      "Integrated Australian Immunisation Register (AIR) via Auth0-secured flows: device activation, catch-up schedules, and record retrieval.",
+      "Handled sensitive clinical data with strict confidentiality and access controls.",
+      "Improved performance and UX with lazy loading, skeleton states, and Playwright E2E; shipped via Azure DevOps pipelines."
     ],
-    "imageSrc": "history/logo-ohs.png"
+    "icon": "hospital"
   },
   {
     "role": "Frontend Developer",
-    "organisation": "Vocus (Dodo & iPrimus)",
-    "startDate": "Oct, 2021",
-    "endDate": "Jun, 2024",
+    "organisation": "Vocus Group — Digital",
+    "startDate": "Oct 2021",
+    "endDate": "Jun 2024",
+    "summary": "Frontend Developer for Dodo and iPrimus B2C platforms, building customer journeys and Salesforce-integrated experiences.",
+    "techStack": "Angular, React, Salesforce, MuleSoft, Docker, NgRx, Redux, Azure",
     "experiences": [
-      "Implemented responsive web design using HTML, CSS, JavaScript, Angular, and React.",
-      "Delivered features for Dodo and iPrimus customer portals with Redux/NGRX state management to enhance user experiences."
+      "Delivered B2C features for Dodo and iPrimus, integrating Salesforce for customer journeys.",
+      "Developed responsive sales funnels for SIM activations, broadband, and energy sign-ups.",
+      "Enhanced UX and improved conversion rates by optimizing the multi-step sign-up process.",
+      "Maintained and expanded MyDodo self-service portal for customer account management.",
+      "Integrated Salesforce and MuleSoft REST APIs for synchronized account and order data.",
+      "Contributed to a large-scale multi-service app with robust state management (NgRx/Redux)."
     ],
-    "imageSrc": "history/logo-vocus.png"
+    "icon": "building"
   },
   {
-    "role": "SWE Developer",
-    "organisation": "I-Tech",
-    "startDate": "May, 2019",
-    "endDate": "Oct, 2021",
+    "role": "Full-Stack Developer",
+    "organisation": "ITechYouLearn Software (Adelaide)",
+    "startDate": "May 2019",
+    "endDate": "Oct 2021",
+    "summary": "Full-Stack Developer building scalable e-learning systems and serverless .NET APIs for education clients.",
+    "techStack": "Angular, HTML5, CSS3, JavaScript, Jasmine, Karma, AWS Lambda",
     "experiences": [
-      "Developed solutions using Microsoft C# and the .NET platform.",
-      "Conducted thorough unit testing using Jasmine and Karma."
+      "Developed and maintained a university-scale e-learning platform for 10,000+ users.",
+      "Designed Angular components and responsive layouts for seamless cross-device access.",
+      "Integrated ASP.NET APIs for content management and authentication workflows.",
+      "Deployed and monitored applications on AWS Lambda and EC2 with a focus on performance.",
+      "Improved application responsiveness through frontend optimization and efficient asset loading."
     ],
-    "imageSrc": "history/logo-itechyoulearn.png"
-  },
-  {
-    "role": "SWE Intern",
-    "organisation": "Enee Solution",
-    "startDate": "Jan, 2019",
-    "endDate": "Aug, 2019",
-    "experiences": [
-      "Laravel framework with PHP, HTML5, SCSS, JQuery, and AJAX, providing high-quality user experiences.",
-      "Integrated with a variety of RESTful APIs for seamless functionality."
-    ],
-    "imageSrc": "history/logo-enee.png"
+    "icon": "laptop"
   }
 ]

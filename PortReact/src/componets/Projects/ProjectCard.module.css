@@ -49,10 +49,10 @@
 }
 
 .links {
-    width: 100%;
-    margin-top: 26px;
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 10px;
 }
 
 .link {

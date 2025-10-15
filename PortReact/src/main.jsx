@@ -5,6 +5,8 @@ import './index.css'
 
 import "@fontsource/outfit"
 import "@fontsource/roboto"
+import 'tippy.js/dist/tippy.css';          // core styles
+import 'tippy.js/animations/scale.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,26 +1,34 @@
 [
+  {
+    "title": "Shopping Cart",
+    "imageSrc": "projects/project1.png",
+    "description": "Simple shopping cart using Angular 12 and NgRx store with a dynamic JSON data source.",
+    "skills": ["HTML5", "Sass", "JavaScript", "Angular", "NgRx"],
+    "demo": "https://github.com/rbasehewa/ShoppingCart",
+    "source": "https://github.com/rbasehewa/ShoppingCart"
+  },
+  {
+    "title": "Happy Merging",
+    "imageSrc": "projects/project2.png",
+    "description": "Merge multiple PDFs into a single document with a simple Node/Express interface.",
+    "skills": ["HTML5", "CSS", "Express", "Node", "jQuery"],
+    "demo": "https://github.com/rbasehewa/Merge-PDF",
+    "source": "https://github.com/rbasehewa/Merge-PDF"
+  },
+  {
+    "title": "Portfolio",
+    "imageSrc": "projects/project3.png",
+    "description": "My personal portfolio built with React + TypeScript, focused on accessibility and clean UI.",
+    "skills": ["React", "TypeScript", "CSS", "HTML5", "Git"],
+    "demo": "https://github.com/rbasehewa/ryan-portfolio",
+    "source": "https://github.com/rbasehewa/ryan-portfolio"
+  },
     {
-      "title": "Shopping cart",
-      "imageSrc": "projects/project1.png",
-      "description": "Simple Shopping cart using NgrX store, Angular 12 with Dynamic JSON file.",
-      "skills": ["HTML5", "SASS", "Javascript", "Angular", "Ngrx"],
-      "demo": "https://github.com/rbasehewa/ShoppingCart",
-      "source": "https://github.com/rbasehewa/ShoppingCart"
-    },
-    {
-      "title": "Happy Merging",
-      "imageSrc": "projects/project2.png",
-      "description": "This project is easy to use for combine multiple PDF into a single document.",
-      "skills": ["HTML5", "CSS", "Express", "Node", "jquery"],
-      "demo": "https://github.com/rbasehewa/Merge-PDF",
-      "source": "https://github.com/rbasehewa/Merge-PDF"
-    },
-    {
-      "title": "Portfoilo",
-      "imageSrc": "projects/project3.png",
-      "description": "My personal portfolio showcasing my work and skills in React and Javascript.",
-      "skills": ["React", "Typescript", "CSS", "HTML5","GIT"],
-      "demo": "https://github.com/rbasehewa/ryan-portfolio",
-      "source": "https://github.com/rbasehewa/ryan-portfolio"
-    }
-  ]
+    "title": "Job Tracker",
+    "imageSrc": "projects/project4.png",
+    "description": "Full-stack job tracker. Includes CRUD operations, filtering, pagination, and AI-ready endpoints.",
+    "skills": ["Angular", "PrimeNG", "Formly", ".NET 8", "PostgreSQL"],
+    "demo": "https://www.youtube.com/watch?v=t0i_IAnbJLs",
+    "source": "https://github.com/rbasehewa/job-tracker"
+  }
+]
