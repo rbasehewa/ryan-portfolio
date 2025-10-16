@@ -1,11 +1,11 @@
 
 import styles from './App.module.css';
-import { About } from './componets/About/About';
-import Contact from "./components/Contact/Contact.jsx";
-import {Experience} from './componets/Experience/Experience';
-import {Hero} from './componets/Hero/Hero';
-import {Navbar} from './componets/Navbar/Navbar';
-import {Projects } from './componets/Projects/Projects';
+import { Contact } from './components/Contact/Contact.jsx';
+import { About } from './components/About/About';
+import { Experience } from './components/Experience/Experience';
+import { Hero } from './components/Hero/Hero';
+import { Navbar } from './components/Navbar/Navbar';
+import { Projects } from './components/Projects/Projects';
 
 function App() {
 
