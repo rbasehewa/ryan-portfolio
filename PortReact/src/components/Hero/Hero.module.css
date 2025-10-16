@@ -135,6 +135,7 @@
         flex-direction: column-reverse;
         margin-left: 5%; 
         margin-right: 5%;
+        margin-top: 20px;
     }
 
     .content {
@@ -175,4 +176,31 @@ margin-bottom: 10px;
     .topBlur, .bottomBlur {
         display: none;
     }
+}
+
+/* Reduce hero height on laptops: make the portrait smaller, tighten spacing */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    gap: 24px;                /* prevents text ↔ image from forcing extra height */
+    margin-top: 20px;         /* slightly pull hero up, optional */
+    padding-bottom: 0;
+  }
+
+  .heroImg {
+    width: clamp(28%, 34vw, 38%); /* shrink the right image so section is shorter */
+    max-height: 520px;            /* keep the portrait from growing too tall */
+    object-fit: contain;          /* no cropping */
+  }
+
+  .description {
+    margin-bottom: 28px;          /* trim vertical rhythm so button sits closer */
+  }
+}
+
+/* Make sure we don't add extra bottom space on very wide desktops either */
+@media (min-width: 1441px) {
+  .heroImg {
+    max-height: 560px;
+    object-fit: contain;
+  }
 }
