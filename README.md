@@ -4,4 +4,4 @@ React Portfolio - A collection of my personal projects, showcasing my skills and
 
 # Sample website
 
-[check it out my sample portfolio](https://www.rmaddumahewa.com)
+[check it out my sample portfolio](https://www.ryanmaddumahewa.dev)
