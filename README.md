@@ -1,7 +1,58 @@
-# ryan-portfolio
+# [Ryan Portfolio](https://www.ryanmaddumahewa.dev)
 
-React Portfolio - A collection of my personal projects, showcasing my skills and experiences as a fullstack developer. This portfolio is built with React, showcasing my frontend development abilities, and includes links to live projects, source code, and detailed documentation.
+A modern personal portfolio built with React (Vite) and a serverless Azure Functions backend powered by Azure OpenAI.
+Showcases my projects, skills, and adds a live chat assistant that answers questions about my work.
 
-# Sample website
+## Project Overview
 
-[check it out my sample portfolio](https://www.ryanmaddumahewa.dev)
+| Layer | Tech | Description |
+|-------|------|--------------|
+| Frontend | React + Vite | User-facing portfolio |
+| Backend | Azure Functions | Handles AI requests |
+| AI Model | Azure OpenAI (GPT-4o-mini) | Responds to chat messages |
+
+### Setup & Run Locally
+
+- Prerequisites
+    - Node.js v18+
+    - Azure Functions Core Tools v4 [Install guide](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local)
+    - Azure OpenAI resource
+    - GitHub account + Azure Static Web App (for deployment)
+
+- Clone the Project
+    - git clone https://github.com/rbasehewa/ryan-portfolio.git
+    - cd ryan-portfolio/PortReact
+
+- Setup the backend (Azure Function)
+    - cd api
+    - npm install
+    - Create a local settings file named `PortReact/api/local.settings.json` and add the following:
+        ```json
+        {
+        "IsEncrypted": false,
+        "Values": {
+            "FUNCTIONS_WORKER_RUNTIME": "node",
+            "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+
+            "AZURE_OPENAI_ENDPOINT": "https://ryan-openai-01.openai.azure.com",
+            "AZURE_OPENAI_KEY": "<your Key 1>",
+            "AZURE_OPENAI_DEPLOYMENT": "gpt-4o-mini",
+            "AZURE_OPENAI_API_VERSION": "2024-02-15-preview"
+        }
+        }
+
+    - func start  // start the function
+    - you should see 
+        ```json
+        Functions:
+        chat: [POST] http://localhost:7071/api/chat
+
+- Run the frontend
+
+    - Use new terminal:
+        ```json
+        cd ../
+        npm install
+        npm run dev
+
+- You should see portfolio and chat assistant :))
