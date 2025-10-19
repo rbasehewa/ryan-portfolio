@@ -1,10 +1,7 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "outfit", Arial, Helvetica, sans-serif;
-}
+/* Tailwind v4 */
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Outfit", Arial, Helvetica, sans-serif; }
