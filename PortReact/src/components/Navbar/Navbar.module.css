@@ -1,33 +1,35 @@
 @import "../../vars.css";
 
 .navbar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 61px;
-    z-index: 2;
-    margin: 0 10%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 61px;
+  z-index: 2;
+  margin: 0 10%;
+  color: var(--color-secondary); 
 }
 
 .navIcon {
   margin-right: 8px;
-  inline-size: 1em;     /* keep width consistent */
+  inline-size: 1em;
   vertical-align: -0.05em;
   opacity: .95;
+  color: currentColor;       
 }
 
-.title {
-    font-size: 27px;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-text);
-    font-family: var(--font-roboto);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+.title { 
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit; 
+  font-family: var(--font-roboto);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .subtitle {
-  display: block;              /* <-- key line */
+  display: block;
   margin-top: 4px;
   font-size: 14px;
   font-weight: 500;
@@ -48,11 +50,12 @@
 }
 
 .menuItems a {
-    font-size: 25px;
-    font-family: var(--font-roboto);
-    color: var(--color-text);
-    text-decoration: none;
+  font-size: 25px;
+  font-family: var(--font-roboto);
+  color: inherit;
+  text-decoration: none;
 }
+
 
 @media screen and (max-width: 830px) {
     .navbar{
@@ -65,7 +68,7 @@
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
-        color: var(--color-text);
+        color: var(--color-secondary); 
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     }
 
@@ -95,6 +98,10 @@
         background: linear-gradient(0deg, rgba(25, 55, 109, 0.2) 0%, rgba(25, 55, 109, 1) 100%);
         padding: 24px 33px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+      .menuItems a { 
+      color: #ffffff; 
     }
 
     .menuOpen {

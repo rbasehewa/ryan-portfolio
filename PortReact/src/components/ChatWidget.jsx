@@ -1,65 +1,208 @@
-import { useState } from "react";
-import { askBot } from "../chatApi";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import PropTypes from "prop-types";
+
+const API_URL = "/api/chat";
+
+function useAutoscroll(dep) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+  }, [dep]);
+  return ref;
+}
+
+function Message({ role, text }) {
+  const isUser = role === "user";
+  return (
+    <div className={`flex gap-3 ${isUser ? "justify-end" : "justify-start"}`}>
+      {!isUser && (
+        <div className="h-8 w-8 shrink-0 rounded-full bg-black text-white grid place-content-center">
+          🤖
+        </div>
+      )}
+      <div
+        className={`max-w-[80%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed shadow-sm ${
+          isUser ? "bg-black text-white" : "bg-gray-100 text-gray-900"
+        }`}
+      >
+        {text}
+      </div>
+      {isUser && (
+        <div className="h-8 w-8 shrink-0 rounded-full bg-gray-200 grid place-content-center">
+          🧑
+        </div>
+      )}
+    </div>
+  );
+}
+Message.propTypes = {
+  role: PropTypes.oneOf(["user", "assistant"]).isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default function ChatWidget() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
-  const [input, setInput] = useState("");
-  const [history, setHistory] = useState([]); // [{role, content}...]
-  const [log, setLog] = useState([{ role: "assistant", content: "Hi! Ask about my projects or availability." }]);
+  const [msg, setMsg] = useState("");
   const [busy, setBusy] = useState(false);
+  const [messages, setMessages] = useState([
+    { role: "assistant", content: "Hi! I’m Ryan’s portfolio bot. Ask me anything." },
+  ]);
+
+  const scrollRef = useAutoscroll(messages);
+  const inputRef = useRef(null);
+
+  useEffect(() => setMounted(true), []);
+
+  // Close on ESC
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   async function send(e) {
     e.preventDefault();
-    const q = input.trim();
-    if (!q || busy) return;
-    setInput("");
-    setLog(l => [...l, { role: "user", content: q }]);
+    const text = msg.trim();
+    if (!text || busy) return;
+
+    const nextMessages = [...messages, { role: "user", content: text }];
+    setMessages(nextMessages);
+    setMsg("");
     setBusy(true);
+
     try {
-      const data = await askBot(q, history);
-      const reply = data?.reply ?? "Sorry, I couldn’t generate a reply.";
-      setLog(l => [...l, { role: "assistant", content: reply }]);
-      setHistory(h => [...h, { role: "user", content: q }, { role: "assistant", content: reply }]);
+      const history = nextMessages.slice(-4).map((m) => ({
+        role: m.role === "assistant" ? "assistant" : "user",
+        content: m.content,
+      }));
+
+      const r = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text, history }),
+      });
+
+      const data = await r.json();
+      const reply = data?.reply ?? "Sorry, I didn’t catch that.";
+      setMessages((m) => [...m, { role: "assistant", content: reply }]);
     } catch {
-      setLog(l => [...l, { role: "assistant", content: "The assistant is unavailable right now." }]);
+      setMessages((m) => [
+        ...m,
+        { role: "assistant", content: "Hmm, I couldn’t reach the server." },
+      ]);
     } finally {
       setBusy(false);
     }
   }
 
-  return (
-    <>
-      <button
-        onClick={()=>setOpen(v=>!v)}
-        style={{position:"fixed", right:16, bottom:16, padding:"10px 14px", borderRadius:999}}
-        aria-haspopup="dialog"
-        aria-expanded={open}
-      >💬 Chat</button>
+  if (!mounted) return null;
 
+  return createPortal(
+    <>
+      {/* FAB */}
+      <button
+        type="button"
+        onClick={() => {
+          setOpen(true);
+          // focus after opening
+          setTimeout(() => inputRef.current?.focus(), 50);
+        }}
+        aria-label="Open chat"
+        className="fixed z-[2147483647]
+                   right-[calc(16px+env(safe-area-inset-right,0px))]
+                   bottom-[calc(16px+env(safe-area-inset-bottom,0px))]
+                   h-14 w-14 rounded-full bg-white shadow-xl text-2xl
+                   grid place-content-center border border-gray-200"
+      >
+        💬
+      </button>
+
+      {/* OPTIONAL: a visual backdrop that DOESN'T block scroll or clicks */}
       {open && (
-        <div role="dialog" aria-label="Chat with Ryan’s AI"
-             style={{position:"fixed", right:16, bottom:80, width:360, maxWidth:"92vw", height:520,
-                     background:"#fff", borderRadius:16, boxShadow:"0 18px 44px rgba(0,0,0,.18)", overflow:"hidden"}}>
-          <header style={{padding:12, fontWeight:600, borderBottom:"1px solid #eee"}}>Ryan’s AI Assistant</header>
-          <div style={{padding:12, height:400, overflow:"auto", fontSize:14, lineHeight:1.45}}>
-            {log.map((m,i)=>(
-              <div key={i} style={{
-                margin: "8px 0",
-                maxWidth:"80%",
-                padding:"8px 10px",
-                borderRadius:12,
-                background: m.role==="user" ? "#eef3ff" : "#f6f6f6",
-                marginLeft: m.role==="user" ? "auto" : 0
-              }}>{m.content}</div>
-            ))}
+        <div
+          className="fixed inset-0 bg-black/20 pointer-events-none z-[2147483646]"
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Floating panel (doesn't block page scroll) */}
+      {open && (
+        <div
+          className="fixed z-[2147483647]
+                     right-[calc(20px+env(safe-area-inset-right,0px))]
+                     bottom-[calc(20px+env(safe-area-inset-bottom,0px))]"
+        >
+          <div
+            className="w-[92vw] max-w-[420px]
+                       h-[70vh] max-h-[640px]
+                       bg-white rounded-2xl shadow-2xl flex flex-col"
+            role="dialog"
+            aria-label="Chat with Ryan"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between px-4 py-3 border-b">
+              <div className="font-semibold">Chat with Ryan</div>
+              <button
+                type="button"
+                className="text-xl leading-none"
+                aria-label="Close chat"
+                onClick={() => setOpen(false)}
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Messages */}
+            <div ref={scrollRef} className="flex-1 overflow-auto p-3 space-y-3">
+              {messages.map((m, i) => (
+                <Message
+                  key={i}
+                  role={m.role === "assistant" ? "assistant" : "user"}
+                  text={m.content}
+                />
+              ))}
+              {busy && (
+                <div className="flex gap-3">
+                  <div className="h-8 w-8 shrink-0 rounded-full bg-black text-white grid place-content-center">
+                    🤖
+                  </div>
+                  <div className="bg-gray-100 rounded-2xl px-3.5 py-2 text-sm shadow-sm">
+                    <span className="inline-flex gap-1">
+                      <span className="animate-pulse">●</span>
+                      <span className="animate-pulse [animation-delay:150ms]">●</span>
+                      <span className="animate-pulse [animation-delay:300ms]">●</span>
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Input */}
+            <form onSubmit={send} className="border-t p-3 flex gap-2">
+              <input
+                ref={inputRef}
+                value={msg}
+                onChange={(e) => setMsg(e.target.value)}
+                placeholder="Type a message…"
+                className="flex-1 h-10 px-3 border rounded-lg focus:outline-none
+                           focus:ring-2 focus:ring-black/20"
+              />
+              <button
+                type="submit"
+                disabled={busy}
+                className="h-10 px-4 rounded-lg bg-black text-white disabled:opacity-50"
+              >
+                Send
+              </button>
+            </form>
           </div>
-          <form onSubmit={send} style={{display:"flex", gap:8, padding:12, borderTop:"1px solid #eee"}}>
-            <input value={input} onChange={e=>setInput(e.target.value)} placeholder="Ask about my work…"
-                   autoComplete="off" style={{flex:1, padding:10, border:"1px solid #ddd", borderRadius:10}}/>
-            <button disabled={busy} type="submit">{busy ? "..." : "Send"}</button>
-          </form>
         </div>
       )}
-    </>
+    </>,
+    document.body
   );
 }

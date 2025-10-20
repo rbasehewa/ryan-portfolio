@@ -1,14 +1,15 @@
 // Hero.tsx
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
+import TypeLine from "../TypeLine";
 
 import Tippy from '@tippyjs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faUniversalAccess,
-  faLink,
+  faCircleCheck,
   faTabletScreenButton,
-  faCode
+  faUserShield,
+  faRobot
 } from '@fortawesome/free-solid-svg-icons';
 
 import { getImageUrl } from '../../utils';
@@ -24,29 +25,61 @@ export const Hero = () => {
 
         {/* Tagline (kept) + WCAG tooltip */}
         <p className={styles.tagline}>
-          Frontend-focused full-stack developer — Angular · .NET · PostgreSQL · Azure · Databricks · 
-          <FontAwesomeIcon icon={faCode} aria-hidden="true" />
+          Frontend-focused full-stack developer — <strong>Angular</strong> · <strong>.NET</strong> · <strong>PostgreSQL</strong> · <strong>Azure</strong> · <strong>AI &amp; Big Data</strong>{' '}
         </p>
 
-        {/* Friendlier about-me copy (same class, no style changes) */}
-        <p className={styles.description}>
-          I love building <strong>scalable apps</strong>
-          <FontAwesomeIcon icon={faTabletScreenButton} aria-hidden="true" />
-          that feel great to use. I care deeply about{' '}
-          <strong>accessibility</strong>{' '}
-          <FontAwesomeIcon icon={faUniversalAccess} aria-hidden="true" /> and{' '}
-          <strong>interoperability</strong>{' '}
-          <FontAwesomeIcon icon={faLink} aria-hidden="true" /> so teams can ship faster and users
-          aren’t left behind. I follow{' '}
-          <Tippy
-            content="Web Content Accessibility Guidelines"
-            animation="scale"
-            delay={[120, 0]}
-          >
-            <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>
-          </Tippy>{' '}
-          principles in my day-to-day work. with growing focus on AI automation and intelligent systems.
-        </p>
+{/* Bullet list with ticks */}
+<ul className={styles.heroList} role="list">
+  <li className={`${styles.heroItem} text-emerald-200/95`}>
+    <FontAwesomeIcon icon={faCircleCheck} className="text-2xl me-3 align-[-0.2em]" aria-hidden="true" />
+    <TypeLine
+      mode="char"
+      speed={55}
+      delay={200}
+      text={"Building digital systems that think smarter and scale faster."}
+      strongRanges={[
+        { start: 9, end: 23 },   // digital systems
+        { start: 35, end: 42 }   // smarter
+      ]}
+    />
+    <FontAwesomeIcon icon={faTabletScreenButton} aria-hidden="true" />
+  </li>
+
+  <li className={`${styles.heroItem} text-emerald-200/95`}>
+    <FontAwesomeIcon icon={faCircleCheck} className="text-2xl me-3 align-[-0.2em]" aria-hidden="true" />
+    <TypeLine
+      mode="char"
+      speed={55}
+      delay={1800}
+      text={"My focus is on privacy-by-design, encryption, and least-privilege access to keep user data safe."}
+      strongRanges={[
+        { start: 16, end: 34 },  // privacy-by-design
+        { start: 36, end: 46 },  // encryption
+        { start: 52, end: 74 }   // least-privilege access
+      ]}
+    />
+    <FontAwesomeIcon icon={faUserShield} aria-hidden="true" />
+  </li>
+
+  <li className={`${styles.heroItem} text-emerald-200/95`}>
+    <FontAwesomeIcon icon={faCircleCheck} className="text-2xl me-3 align-[-0.2em]" aria-hidden="true" />
+    <TypeLine
+      mode="char"
+      speed={55}
+      delay={3600}
+      text={"I enjoy working with data, exploring AI and LLMs to turn insights into intelligent features."}
+      strongRanges={[
+        { start: 22, end: 26 },  // data
+        { start: 38, end: 40 },  // AI
+        { start: 45, end: 49 }   // LLMs
+      ]}
+    />
+    <FontAwesomeIcon icon={faRobot} aria-hidden="true" />
+  </li>
+</ul>
+
+
+
 
         <Tippy content="Opens your email app" placement="top" animation="scale" delay={[120, 0]}>
           <a

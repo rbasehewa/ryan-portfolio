@@ -1,205 +1,264 @@
 @import "../../vars.css";
 
-
 .container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 5px;
-    z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-
 
 .content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: var(--color-text);
-    z-index: 1;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
 }
+
 
 .title{
-    font-size: 72px;
-    font-weight: 900;
-    font-family: var(--font-roboto);
-    background: linear-gradient(
-        90deg,
-        rgba(255,255,255,1) 70%,
-        rgba(255,255,255,0) 120%
-    );
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
+  font-size: 72px;
+  font-weight: 900;
+  font-family: var(--font-roboto);
 
+  /* solid green (matches your --color-primary = #01eac1) */
+  color: var(--color-primary);
+
+  /* remove the old gradient clip */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: currentColor;
+
+  /* readability niceties */
+  text-shadow: 0 1px 1px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.12);
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
 .description {
   font-size: 25px;
   font-family: var(--font-roboto);
-  margin-bottom: 52px;
 
-  /* make both sides straight */
-  text-align: justify;
+  /* tighten rhythm a bit for a denser hero */
+  line-height: 1.35;
+  margin-bottom: 28px;            /* was 52px */
+
+  /* keep your “straight edges”, but guide the measure */
+  text-align: left;
   text-justify: inter-word;
-  text-align-last: left;   /* last line stays left-aligned */
+  text-align-last: left;
+
+  /* limit line length so it doesn’t feel airy */
+  max-width: 58ch;
+
+  /* nicer wrapping & hyphenation without changing alignment */
+  text-wrap: balance;
+  hyphens: auto;
 }
 
-.contactBtn {
+.contactBtn{
+  text-decoration: none;
+  font-family: var(--font-roboto);
+  background-color: var(--color-primary);
+  color: var(--color-secondary-text);
+  border-radius: 100px;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
 
-    text-decoration: none;
-    font-family: var(--font-roboto);
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border-radius: 100px;
-    font-size: 25px;
-    font-weight: 600;
-    padding: 17px 26px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  /* tailwind-like interaction states */
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+.contactBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+  filter: brightness(1.02);
+}
+.contactBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+.contactBtn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.9),
+    0 0 0 6px rgba(59,130,246,0.55); /* Tailwind-ish ring-blue-500/55 */
 }
 
-.heroImg {
-    width: 50%;
-    z-index: 1;
-    display: block;  
+.heroImg{
+  width: 50%;
+  z-index: 1;
+  display: block;
 
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* list layout */
+.heroList {
+  list-style: none;
+  margin: 0 0 18px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* single-line bullets with icon + text */
+.heroItem{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  white-space: normal;     /* was nowrap */
+  overflow: visible;       /* was hidden */
+  text-overflow: clip;     /* was ellipsis */
+  max-width: 68ch;         /* give a bit more measure (tweak as you like) */
+  line-height: 1.4;
+}
+
+/* keep icon aligned nicely */
+.heroItem svg{
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+/* ensure the text area can wrap even inside a flex row */
+.heroText{
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 @keyframes floating {
-
-    0% {
-        transform: translate(0, 0px);
-    }
-
-    50% {
-        transform: translate(0, 10px);
-    }
-
-    100% {
-        transform: translate(0, -0px);
-    }
+  0%   { transform: translate(0, 0px); }
+  50%  { transform: translate(0, 10px); }
+  100% { transform: translate(0, -0px); }
 }
 
-.topBlur {
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    min-width: 350px;
-    min-height: 350px;
-    top: -128px;
-    left: -10vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
+/* honor reduced motion — no layout change */
+@media (prefers-reduced-motion: reduce) {
+  .heroImg { animation: none !important; }
+}
+
+.topBlur{
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  min-height: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25,55,109,0.7);
+  filter: blur(100px);
+  z-index: 0;
 }
 
 /* Keep tagline directly under and aligned with the name */
-.tagline {
+.tagline{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: .5rem .75rem;
 
-  margin: 0 0 18px 0;        /* sits right under the name */
-  padding-left: 2px;         /* optical align with gradient text edge */
+  margin: 0 0 18px 0;
+  padding-left: 2px;
   font-size: clamp(0.9rem, 1.4vw, 1rem);
   letter-spacing: .2px;
   opacity: .9;
-  align-self: flex-start;     /* ensures it follows the left edge of the name */
+  align-self: flex-start;
+  text-wrap: balance;
 }
 
-.bottomBlur {
-    position: absolute;
-    width: 70vw;
-    height: 50vw;
-    min-width: 350px;
-    min-height: 250px;
-    top: 246px;
-    right: -25vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
+.bottomBlur{
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  min-height: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25,55,109,0.7);
+  filter: blur(100px);
+  z-index: 0;
 }
 
-@media screen and (max-width: 830px) {
-
-    .container {
-        flex-direction: column-reverse;
-        margin-left: 5%; 
-        margin-right: 5%;
-        margin-top: 20px;
-    }
-
-    .content {
-        align-items: center;
-        text-align: center;
-    }
-
-    .title {
-        font-size: 36px;
-margin-bottom: 10px;
-  line-height: 1.08;         /* crisper heading rhythm */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    }
-
-      .tagline {
-    justify-content: center;  /* since content is centered on mobile */
+@media screen and (max-width: 830px){
+  .container{
+    flex-direction: column-reverse;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+  }
+  .content{
+    align-items: center;
+    text-align: center;
+  }
+  .title{
+    color: var(--color-secondary-text);
+    font-size: 36px;
+    margin-bottom: 10px;
+    line-height: 1.08;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  .tagline{
+    justify-content: center;
     padding-left: 0;
     margin-bottom: 16px;
   }
+  .description{
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #073D39; /* your choice kept */
+    max-width: 60ch;         /* still keep a nice measure */
+    text-wrap: balance;
+  }
+  .contactBtn{
+    font-size: 20px;
+    font-family: var(--font-roboto);
+    padding: 10px 20px;
+  }
+  .heroImg{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .topBlur, .bottomBlur{ display: none; }
 
-    .description {
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: #073D39;
-    }
-
-    .contactBtn {
-        font-size: 20px;
-        font-family: var(--font-roboto);
-        padding: 10px 20px;
-    }
-
-    .heroImg {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .topBlur, .bottomBlur {
-        display: none;
-    }
+    .heroItem {
+      color: var(--color-secondary-text);
+    white-space: normal;
+    text-overflow: clip;
+  }
 }
 
 /* Reduce hero height on laptops: make the portrait smaller, tighten spacing */
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .container {
-    gap: 24px;                /* prevents text ↔ image from forcing extra height */
-    margin-top: 20px;         /* slightly pull hero up, optional */
+@media (min-width: 1024px) and (max-width: 1440px){
+  .container{
+    gap: 24px;
+    margin-top: 20px;
     padding-bottom: 0;
   }
-
-  .heroImg {
-    width: clamp(28%, 34vw, 38%); /* shrink the right image so section is shorter */
-    max-height: 520px;            /* keep the portrait from growing too tall */
-    object-fit: contain;          /* no cropping */
+  .heroImg{
+    width: clamp(28%, 34vw, 38%);
+    max-height: 520px;
+    object-fit: contain;
   }
-
-  .description {
-    margin-bottom: 28px;          /* trim vertical rhythm so button sits closer */
+  .description{
+    margin-bottom: 28px;
   }
 }
 
-/* Make sure we don't add extra bottom space on very wide desktops either */
-@media (min-width: 1441px) {
-  .heroImg {
+/* Very wide desktops */
+@media (min-width: 1441px){
+  .heroImg{
     max-height: 560px;
     object-fit: contain;
   }
