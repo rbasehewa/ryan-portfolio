@@ -1,7 +1,53 @@
 /* Tailwind v4 */
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
+/* your base resets */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: "Outfit", Arial, Helvetica, sans-serif; }
+
+/* --- tiny typewriter utilities (no @apply) --- */
+.type-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.type-caret::after {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  /* logical properties so it works in LTR/RTL */
+  border-inline-end: 2px solid currentColor;   /* replaces border-r-2 + border-current */
+  margin-inline-start: 0.125rem;               /* replaces ms-0.5 / ml-0.5 */
+  height: 1em;
+  width: 0;
+  animation: blink 1s step-end infinite;
+}
+
+.rise-in {
+  animation: rise 420ms ease-out both;
+}
+
+.animate-typing {
+  animation: typing var(--tw-type-duration, 1.6s)
+             steps(var(--tw-type-steps, 50), end) forwards;
+}
+
+/* keyframes */
+@keyframes blink { 50% { border-color: transparent; } }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes typing {
+  from { width: 0; }
+  to   { width: var(--tw-type-width, 50ch); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-typing, .rise-in { animation: none !important; }
+  .type-caret::after { content: none; }
+}
