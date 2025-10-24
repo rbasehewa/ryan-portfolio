@@ -25,7 +25,7 @@
 }
 
 .icon {
-  color: yellow;       /* bright solid blue */
+  color: var(--color-dark);      /* bright solid blue */
   opacity: 1;           /* ensure full visibility */
   font-weight: 900;     /* bold variant of FontAwesome */
 }
@@ -93,6 +93,7 @@
 
 .historyIconWrap {
   width: 50px;
+  color: var(--color-dark); 
   height: 50px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);

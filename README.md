@@ -34,8 +34,8 @@ Showcases my projects, skills, and adds a live chat assistant that answers quest
             "FUNCTIONS_WORKER_RUNTIME": "node",
             "AzureWebJobsStorage": "UseDevelopmentStorage=true",
 
-            "AZURE_OPENAI_ENDPOINT": "Azure endpoint",
-            "AZURE_OPENAI_KEY": "Key 1",
+            "AZURE_OPENAI_ENDPOINT": "Azure endpoint", // make sure update it Azure endpoint
+            "AZURE_OPENAI_KEY": "Key 1", // and the KEY
             "AZURE_OPENAI_DEPLOYMENT": "gpt-4o-mini",
             "AZURE_OPENAI_API_VERSION": "2024-02-15-preview"
         }
