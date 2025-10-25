@@ -1,4 +1,4 @@
-:root{
+:root {
     /* Colours */
     --color-text: #fff;
     --color-secondary-text: #312E81;
@@ -6,11 +6,35 @@
     --color-secondary: #19376d;
     --color-dark: #0b2447;
     --color-bg: #3AE8BF;
-    --color-font-des : #F7F8F9;
+    --color-font-des: #F7F8F9;
     --color-emerald: #A7F3D0;
 
     /* Fonts */
 
     --font-roboto: "Roboto";
     --font-outfit: "Outfit";
+
+    /* existing... */
+    --color-angular: #dd0031;
+    /* Angular red */
+    --color-react: #61dafb;
+    /* React cyan */
+    --color-dotnet: #512bd4;
+    /* .NET purple */
+    --color-linux: #f9a825;
+    /* Linux gold */
+    --color-aws: #ff9900;
+    /* AWS orange */
+    --color-soft: #a7f3d0;
+    /* soft skills (emerald-200) */
+    --color-laravel: #ff2d20;
+    /* Laravel red */
+    --color-flutter: #02569b;
+    /* Flutter blue */
+    --color-rest: #9ca3af;
+    /* REST APIs neutral gray (Tailwind gray-400) */
+    --color-salesforce: #00a1e0;
+    /* Salesforce blue */
+    --color-azure: #0078d4;
+    /* Azure blue */
 }

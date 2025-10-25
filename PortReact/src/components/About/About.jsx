@@ -14,8 +14,7 @@ import {
   faSeedling,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-
-import { getImageUrl } from "../../utils";
+import AboutTimeline from "./AboutTimeline";
 import styles from "./About.module.css";
 
 export const About = () => {
@@ -33,13 +32,9 @@ export const About = () => {
       </h2>
 
       <div className={styles.content}>
-        <img
-          src={getImageUrl("about/aboutImageAI.png")}
-          alt="Collage of photos from work and outdoors"
-          className={styles.aboutImage}
-          loading="lazy"
-          decoding="async"
-        />
+        <div className={styles.aboutImage}>
+          <AboutTimeline />
+        </div>
 
         <ul className={styles.aboutItems} role="list">
           {/* Ocean Health Systems */}
