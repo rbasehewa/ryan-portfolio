@@ -22,6 +22,7 @@
     margin-top: 0;
     padding-top: 10px;
     text-transform: uppercase;
+    padding: 18px;
 }
 
 .itemHeader {
@@ -191,8 +192,7 @@
     }
 
     .aboutItem {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 18px;
     }
 
 }

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" role="img" aria-label="Code favicon">
+  <defs>
+    <linearGradient id="bg2" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#01EAC1"/>
+      <stop offset="0.6" stop-color="#A7F3D0"/>
+      <stop offset="1" stop-color="#19376D"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg2)"/>
+  <g fill="#fff">
+    <path d="M24 22l-12 10 12 10 2.8-3.3-8-6.7 8-6.7L24 22z"/>
+    <path d="M40 22l-2.8 3.3 8 6.7-8 6.7L40 42l12-10L40 22z"/>
+    <rect x="30.5" y="20" width="3" height="24" rx="1.5" opacity=".95"/>
+  </g>
+</svg>

@@ -200,6 +200,7 @@
   .content{
     align-items: center;
     text-align: center;
+    padding-bottom: 10px;
   }
   .title{
     color: var(--color-secondary-text);

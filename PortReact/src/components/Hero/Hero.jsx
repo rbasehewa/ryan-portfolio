@@ -99,18 +99,19 @@ export const Hero = () => {
         </ul>
 
         <Tippy
-          content="Opens your email app"
+          content="Opens chat"
           placement="top"
           animation="scale"
           delay={[120, 0]}
         >
-          <a
-            href="mailto:rbasehewa@gmail.com"
+          <button
+            type="button"
             className={styles.contactBtn}
-            aria-label="Email Ryan Maddumahewa"
+            aria-controls="chat-panel"
+            onClick={() => window.dispatchEvent(new CustomEvent("open-chat"))}
           >
-            Let’s connect!
-          </a>
+            Let’s chat!
+          </button>
         </Tippy>
       </div>
 

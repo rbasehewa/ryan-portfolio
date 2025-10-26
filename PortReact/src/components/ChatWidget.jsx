@@ -49,13 +49,41 @@ export default function ChatWidget() {
   const [msg, setMsg] = useState("");
   const [busy, setBusy] = useState(false);
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hi! I’m Ryan’s portfolio bot. Ask me anything." },
+    {
+      role: "assistant",
+      content: "Hi! I’m Ryan’s portfolio bot. Ask me anything.",
+    },
   ]);
 
   const scrollRef = useAutoscroll(messages);
   const inputRef = useRef(null);
 
   useEffect(() => setMounted(true), []);
+
+  // Open via custom event from anywhere (e.g., the "Let’s connect!" button)
+  useEffect(() => {
+    const openHandler = () => {
+      setOpen(true);
+      setTimeout(() => inputRef.current?.focus(), 50);
+    };
+    window.addEventListener("open-chat", openHandler);
+    return () => window.removeEventListener("open-chat", openHandler);
+  }, []);
+
+  // Tiny global API (optional but handy)
+  useEffect(() => {
+    const api = {
+      open: () => window.dispatchEvent(new CustomEvent("open-chat")),
+      close: () => setOpen(false),
+      toggle: () => setOpen((v) => !v),
+    };
+    // @ts-ignore
+    window.RyanChat = api;
+    return () => {
+      // @ts-ignore
+      if (window.RyanChat === api) delete window.RyanChat;
+    };
+  }, []);
 
   // Close on ESC
   useEffect(() => {
@@ -108,7 +136,6 @@ export default function ChatWidget() {
         type="button"
         onClick={() => {
           setOpen(true);
-          // focus after opening
           setTimeout(() => inputRef.current?.focus(), 50);
         }}
         aria-label="Open chat"
@@ -121,7 +148,7 @@ export default function ChatWidget() {
         💬
       </button>
 
-      {/* OPTIONAL: a visual backdrop that DOESN'T block scroll or clicks */}
+      {/* Optional visual backdrop (doesn't block clicks) */}
       {open && (
         <div
           className="fixed inset-0 bg-black/20 pointer-events-none z-[2147483646]"
@@ -129,7 +156,7 @@ export default function ChatWidget() {
         />
       )}
 
-      {/* Floating panel (doesn't block page scroll) */}
+      {/* Floating panel */}
       {open && (
         <div
           className="fixed z-[2147483647]
@@ -137,6 +164,7 @@ export default function ChatWidget() {
                      bottom-[calc(20px+env(safe-area-inset-bottom,0px))]"
         >
           <div
+            id="chat-panel"
             className="w-[92vw] max-w-[420px]
                        h-[70vh] max-h-[640px]
                        bg-white rounded-2xl shadow-2xl flex flex-col"
@@ -173,8 +201,12 @@ export default function ChatWidget() {
                   <div className="bg-gray-100 rounded-2xl px-3.5 py-2 text-sm shadow-sm">
                     <span className="inline-flex gap-1">
                       <span className="animate-pulse">●</span>
-                      <span className="animate-pulse [animation-delay:150ms]">●</span>
-                      <span className="animate-pulse [animation-delay:300ms]">●</span>
+                      <span className="animate-pulse [animation-delay:150ms]">
+                        ●
+                      </span>
+                      <span className="animate-pulse [animation-delay:300ms]">
+                        ●
+                      </span>
                     </span>
                   </div>
                 </div>

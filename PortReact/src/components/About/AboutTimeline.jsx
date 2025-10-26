@@ -30,11 +30,11 @@ const M = [
   },
   {
     range: "2016–2018",
-    title: "Support Engineer (Linux) · Master’s",
+    title: "System Support Engineer (Linux) · Master’s",
     data: [
       { name: "Linux", value: 70 },
       { name: "AWS", value: 15 },
-      { name: "Soft Skills", value: 15 },
+      { name: "day-to-day IT support and troubleshooting", value: 15 },
     ],
   },
   {

@@ -42,5 +42,5 @@
   { "title": "GraphQL", "imageSrc": "skills/graphql.png" },
     { "title": "Salesforce", "imageSrc": "skills/salesforce.png" },
   { "title": "PrimeNG", "imageSrc": "skills/primeng.png" },
-  { "title": "GraphQL", "imageSrc": "skills/aws.png" }
+  { "title": "AWS", "imageSrc": "skills/aws.png" }
   ]
