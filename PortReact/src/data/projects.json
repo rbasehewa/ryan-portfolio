@@ -8,6 +8,19 @@
     "source": "https://github.com/rbasehewa/ShoppingCart"
   },
   {
+    "title": "ImmuniRecord CRUD App",
+    "imageSrc": "projects/project5.png",
+    "description": "CRUD app for managing Patients, Vaccines, and Immunisations with Bootstrap UI.",
+    "skills": [
+      "Ruby on Rails 8",
+      "Healthcare Domain",
+      "Bootstrap 5",
+      "SQLite"
+    ],
+    "demo": "https://www.youtube.com/watch?v=Bp8inCPe-wY",
+    "source": "https://github.com/rbasehewa/immuni_record"
+  },
+  {
     "title": "Happy Merging",
     "imageSrc": "projects/project2.png",
     "description": "Merge multiple PDFs into a single document with a simple Node/Express interface.",
@@ -23,7 +36,7 @@
     "demo": "https://github.com/rbasehewa/ryan-portfolio",
     "source": "https://github.com/rbasehewa/ryan-portfolio"
   },
-    {
+  {
     "title": "Job Tracker",
     "imageSrc": "projects/project4.png",
     "description": "Full-stack job tracker. Includes CRUD operations, filtering, pagination, and AI-ready endpoints.",
