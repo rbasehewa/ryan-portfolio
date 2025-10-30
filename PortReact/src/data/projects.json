@@ -9,7 +9,7 @@
   },
   {
     "title": "Time Offset Calculator",
-    "imageSrc": "projects/project5.png",
+    "imageSrc": "projects/project6.png",
     "description": "A full-stack sample project showing how to store and display timestamps correctly across timezones.",
     "skills": [".NET 8", "Angular", "C#", "REST", "SWAGGER"],
     "demo": "https://github.com/rbasehewa/angular-dotnet-timeoffset",
