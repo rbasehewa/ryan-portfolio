@@ -8,15 +8,18 @@
     "source": "https://github.com/rbasehewa/ShoppingCart"
   },
   {
+    "title": "Time Offset Calculator",
+    "imageSrc": "projects/project5.png",
+    "description": "A full-stack sample project showing how to store and display timestamps correctly across timezones.",
+    "skills": [".NET 8", "Angular", "C#", "REST", "SWAGGER"],
+    "demo": "https://github.com/rbasehewa/angular-dotnet-timeoffset",
+    "source": "https://github.com/rbasehewa/angular-dotnet-timeoffset"
+  },
+  {
     "title": "ImmuniRecord CRUD App",
     "imageSrc": "projects/project5.png",
     "description": "CRUD app for managing Patients, Vaccines, and Immunisations with Bootstrap UI.",
-    "skills": [
-      "Ruby on Rails 8",
-      "Healthcare Domain",
-      "Bootstrap 5",
-      "SQLite"
-    ],
+    "skills": ["Ruby on Rails 8", "Healthcare Domain", "Bootstrap 5", "SQLite"],
     "demo": "https://www.youtube.com/watch?v=Bp8inCPe-wY",
     "source": "https://github.com/rbasehewa/immuni_record"
   },
