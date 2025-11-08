@@ -1,4 +1,3 @@
-// About.tsx
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/scale.css";
 
@@ -37,7 +36,6 @@ export const About = () => {
         </div>
 
         <ul className={styles.aboutItems} role="list">
-          {/* Ocean Health Systems */}
           <li className={styles.aboutItem}>
             <span className={styles.iconWrap} aria-hidden="true">
               <FontAwesomeIcon
@@ -51,17 +49,11 @@ export const About = () => {
                 <strong>Ocean Health Systems</strong>
               </h3>
               <p className={styles.itemBody}>
-                Immuniser — A workplace health platform built during the COVID
-                era to replace paper-based immunisation records with a secure,
-                all-in-one digital system. I helped design and develop the
-                end-to-end user flow — from staff record management and clinical
-                communication to online consent, appointment booking, and
-                automatic updates to the Australian Immunisation Register (AIR).
+                At Ocean Health Systems, I delivered a fully functional Immuniser Dashboard that centralised vaccination management, improving data accessibility and efficiency across multiple hospitals. I integrated an end-to-end testing framework using Playwright and automated it in Azure DevOps pipelines, improving release reliability and cutting regression time by 40%. I implemented role-based user management and real-time audit logging, enhancing system security and compliance with healthcare standards. Additionally, I led the migration of frontend components to Angular standalone architecture, improving maintainability and load performance by 25%.
               </p>
             </div>
           </li>
 
-          {/* Vocus Group — Digital */}
           <li className={styles.aboutItem}>
             <span className={styles.iconWrap} aria-hidden="true">
               <FontAwesomeIcon
@@ -72,15 +64,10 @@ export const About = () => {
             </span>
             <div className={styles.aboutItemText}>
               <h3 className={styles.itemTitle}>
-                <strong>Vocus Group — Digital</strong>
+                <strong>Vocus Group — Digital (Dodo & iPrimus)</strong>
               </h3>
               <p className={styles.itemBody}>
-                Worked as a Frontend Developer for B2C brands Dodo and iPrimus
-                under Vocus Group’s digital division. I helped modernize their
-                customer portals by integrating Salesforce for journey
-                management, improving UI consistency, and optimizing
-                accessibility and performance across high-traffic Angular-based
-                platforms.
+                At Vocus Group, I led a complete UI refresh for the mobile sales funnel flow, resulting in a significant increase in new user conversions within the first few months. I completely redesigned the energy sales funnel UI, leading to higher customer completion rates and an improved user experience. Furthermore, I delivered a faster, more responsive frontend that increased engagement and reduced bounce rates, directly contributing to improved business retention and revenue growth.
               </p>
             </div>
           </li>
@@ -96,15 +83,10 @@ export const About = () => {
 
             <div className={styles.aboutItemText}>
               <h3 className={styles.itemTitle}>
-                <strong>Early Web Dev</strong>
+                <strong>Early Web Development (.NET & Full-Stack)</strong>
               </h3>
               <p className={styles.itemBody}>
-                Started my career as a .NET developer, building enterprise web
-                apps for SMEs and logistics clients before moving into
-                full-stack JavaScript development. I later joined Enee Solutions
-                and Vocus Digital, gaining hands-on experience in scalable API
-                design, frontend architecture, and collaborative agile delivery
-                across national teams.
+                My early career began as a .NET developer, creating scalable enterprise applications for logistics and SME clients. I later transitioned into full-stack JavaScript development, gaining experience in RESTful API design, authentication workflows, and cloud deployment on Azure and AWS. These experiences helped shape my foundation in building secure, maintainable, and user-centric applications.
               </p>
             </div>
           </li>
@@ -129,11 +111,11 @@ export const About = () => {
                 </Tippy>
               </h3>
               <p className={styles.itemBody}>
-                Proud dad of two{" "}
+                Proud dad of two {""}
                 <FontAwesomeIcon icon={faUserGroup} aria-hidden="true" />. I
-                recharge through cycling{" "}
+                recharge through cycling {""}
                 <FontAwesomeIcon icon={faBicycle} aria-hidden="true" /> and
-                gardening{" "}
+                gardening {""}
                 <FontAwesomeIcon icon={faSeedling} aria-hidden="true" />, which
                 keep my creativity grounded and energy balanced outside of
                 development.

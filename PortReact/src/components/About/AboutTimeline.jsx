@@ -20,70 +20,72 @@ const COLOR_MAP = {
 
 const M = [
   {
-    range: "2014–2016",
-    title: ".NET Backend Developer",
+    range: "2013–2016",
+    title: "Associate Software Engineer (Healthcare, LK)",
     data: [
-      { name: ".NET/C#", value: 80 },
-      { name: "Angular", value: 10 },
-      { name: "React", value: 10 },
+      { name: ".NET/C#", value: 70 },
+      { name: "REST APIs", value: 20 },
+      { name: "Soft Skills", value: 10 },
     ],
   },
   {
     range: "2016–2018",
-    title: "System Support Engineer (Linux) · Master’s",
+    title: "Assistant Support Engineer (Linux) · Master’s",
     data: [
-      { name: "Linux", value: 70 },
-      { name: "AWS", value: 15 },
-      { name: "day-to-day IT support and troubleshooting", value: 15 },
+      { name: "Linux", value: 60 },
+      { name: ".NET/C#", value: 20 },
+      { name: "AWS", value: 10 },
+      { name: "Soft Skills", value: 10 },
     ],
   },
   {
     range: "2018–2019",
-    title: "Professional Year (AU culture & ACS Internship)",
-    data: [
-      { name: "Soft Skills", value: 60 },
-      { name: "AWS", value: 20 },
-      { name: ".NET/C#", value: 20 },
-    ],
-  },
-  {
-    range: "2019 (Jan–May)",
     title: "Enee Solutions · Software Developer",
     data: [
-      { name: "Laravel", value: 60 },
-      { name: "Flutter", value: 20 },
-      { name: "REST APIs", value: 10 },
-      { name: "AWS", value: 10 },
+      { name: "Laravel", value: 50 },
+      { name: "REST APIs", value: 25 },
+      { name: "AWS", value: 15 },
+      { name: ".NET/C#", value: 10 },
     ],
   },
   {
-    range: "2019 May – 2021 Oct",
-    title: "I Tech You Learn · Full-stack (.NET + React, AWS)",
+    range: "2019–2020",
+    title: "ITechYouLearn (EdTech) · Software Developer",
     data: [
-      { name: ".NET/C#", value: 40 },
-      { name: "React", value: 35 },
+      { name: ".NET/C#", value: 35 },
+      { name: "React", value: 25 },
       { name: "AWS", value: 25 },
+      { name: "REST APIs", value: 15 },
     ],
   },
   {
-    range: "2021–2023",
-    title: "Vocus Group · Frontend (Angular & React)",
+    range: "2020–2021",
+    title: "ZippyCrowd · Frontend Developer",
     data: [
-      { name: ".NET/C#", value: 20 },
+      { name: "React", value: 60 },
+      { name: "REST APIs", value: 25 },
+      { name: "Soft Skills", value: 15 },
+    ],
+  },
+  {
+    range: "Oct 2021–Jan 2024",
+    title: "Vocus Group (Dodo / iPrimus) · Frontend Engineer",
+    data: [
+      { name: "Angular", value: 50 },
       { name: "Salesforce", value: 20 },
-      { name: "Angular", value: 30 },
-      { name: "React", value: 20 },
+      { name: ".NET/C#", value: 10 },
+      { name: "React", value: 10 },
       { name: "AWS", value: 10 },
     ],
   },
   {
-    range: "2023–Present",
-    title: "Ocean Health Systems · Software Developer · .NET APIs + Angular",
+    range: "Jan 2024–Present",
+    title: "Ocean Health Systems · Software Engineer (Angular & .NET 8)",
     data: [
-      { name: ".NET/C#", value: 40 },
-      { name: "Angular", value: 40 },
-      { name: "React", value: 10 },
+      { name: "Angular", value: 50 },
+      { name: ".NET/C#", value: 30 },
       { name: "Azure", value: 10 },
+      { name: "REST APIs", value: 10 },
     ],
   },
 ];
@@ -99,8 +101,8 @@ const Dot = ({ color }) => (
 export default function AboutTimeline() {
   return (
     <div className="grid gap-12">
-      {M.map((m, i) => (
-        <div key={i} className="flex items-center gap-6">
+{[...M].reverse().map((m) => (
+  <div key={`${m.range}-${m.title}`} className="flex items-center gap-6">
           {/* mini pie */}
           <div className="h-28 w-28 shrink-0 rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur">
             <ResponsiveContainer>

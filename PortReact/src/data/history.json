@@ -1,49 +1,49 @@
 [
   {
-    "role": "Frontend Developer",
+    "role": "Software Engineer",
     "organisation": "Ocean Health Systems",
-    "startDate": "Oct 2023",
+    "startDate": "Jan 2024",
     "endDate": "Present",
-    "summary": "Frontend Developer delivering secure Angular-based solutions for healthcare workflows, ensuring accessibility and data confidentiality.",
-    "techStack": "Angular 17+, PrimeNG, Formly, RxJS, .NET API, Azure, Auth0, Playwright",
+    "summary": "Frontend-focused Software Engineer developing secure, high-performance healthcare web applications using Angular and .NET 8. Responsible for UI/UX design, data confidentiality, and CI/CD delivery through Azure DevOps.",
+    "techStack": "Angular 17–21, TypeScript, PrimeNG, Tailwind CSS, .NET 8, Auth0, REST API, Azure DevOps, Playwright",
     "experiences": [
-      "Built the Immuniser Angular SPA (v17+) with PrimeNG, Formly, and RxJS to streamline clinical workflows.",
-      "Integrated Australian Immunisation Register (AIR) via Auth0-secured flows: device activation, catch-up schedules, and record retrieval.",
-      "Handled sensitive clinical data with strict confidentiality and access controls.",
-      "Improved performance and UX with lazy loading, skeleton states, and Playwright E2E; shipped via Azure DevOps pipelines."
+      "Designed and implemented the Immuniser Dashboard, centralising vaccination management across hospitals and improving efficiency.",
+      "Handled sensitive hospital staff vaccination data with strict confidentiality, implementing role-based access and audit logging.",
+      "Integrated with the Australian Immunisation Register (AIR) via REST APIs using Auth0-secured authentication and token management.",
+      "Automated Playwright E2E testing within Azure CI/CD pipelines, improving release reliability and cutting regression time by 40%.",
+      "Migrated frontend modules to Angular standalone architecture, improving maintainability and reducing load time by 25%."
     ],
     "icon": "hospital"
   },
   {
-    "role": "Frontend Developer",
-    "organisation": "Vocus Group — Digital",
+    "role": "Frontend Engineer",
+    "organisation": "Vocus Group (Dodo / iPrimus)",
     "startDate": "Oct 2021",
-    "endDate": "Jun 2024",
-    "summary": "Frontend Developer for Dodo and iPrimus B2C platforms, building customer journeys and Salesforce-integrated experiences.",
-    "techStack": "Angular, React, Salesforce, MuleSoft, Docker, NgRx, Redux, Azure",
+    "endDate": "Jan 2024",
+    "summary": "Frontend Engineer within the Digital team delivering scalable customer portals for telecom and energy products, focused on UX, conversion, and API integration.",
+    "techStack": "Angular, TypeScript, PrimeNG, Salesforce, MuleSoft, REST API, NgRx, Azure, GitHub, CI/CD",
     "experiences": [
-      "Delivered B2C features for Dodo and iPrimus, integrating Salesforce for customer journeys.",
-      "Developed responsive sales funnels for SIM activations, broadband, and energy sign-ups.",
-      "Enhanced UX and improved conversion rates by optimizing the multi-step sign-up process.",
-      "Maintained and expanded MyDodo self-service portal for customer account management.",
-      "Integrated Salesforce and MuleSoft REST APIs for synchronized account and order data.",
-      "Contributed to a large-scale multi-service app with robust state management (NgRx/Redux)."
+      "Developed and enhanced responsive sales funnels for mobile, broadband, and energy services, improving conversion rates and engagement.",
+      "Maintained and upgraded the MyDodo self-service portal, enabling customers to manage internet, mobile, and energy accounts seamlessly.",
+      "Integrated Salesforce CRM and MuleSoft REST APIs for synchronised customer, billing, and order data using OpenAPI specs.",
+      "Implemented UX and performance improvements that reduced support calls and boosted online retention.",
+      "Mentored junior developers and contributed to design discussions focusing on scalability, accessibility, and frontend best practices."
     ],
     "icon": "building"
   },
   {
-    "role": "Full-Stack Developer",
-    "organisation": "ITechYouLearn Software (Adelaide)",
-    "startDate": "May 2019",
-    "endDate": "Oct 2021",
-    "summary": "Full-Stack Developer building scalable e-learning systems and serverless .NET APIs for education clients.",
-    "techStack": "Angular, HTML5, CSS3, JavaScript, Jasmine, Karma, AWS Lambda",
+    "role": "Software Developer",
+    "organisation": "ITechYouLearn Pty Ltd (EdTech)",
+    "startDate": "Mar 2019",
+    "endDate": "Sep 2020",
+    "summary": "Software Developer building and maintaining university-scale e-learning platforms and serverless applications, integrating .NET and AWS-based solutions.",
+    "techStack": "Angular, TypeScript, HTML5, CSS3, .NET Core, AWS Lambda, EC2, PostgreSQL, Jasmine, Karma",
     "experiences": [
-      "Developed and maintained a university-scale e-learning platform for 10,000+ users.",
-      "Designed Angular components and responsive layouts for seamless cross-device access.",
-      "Integrated ASP.NET APIs for content management and authentication workflows.",
-      "Deployed and monitored applications on AWS Lambda and EC2 with a focus on performance.",
-      "Improved application responsiveness through frontend optimization and efficient asset loading."
+      "Built and maintained an e-learning platform serving 10,000+ users with course delivery, assessments, and student progress tracking.",
+      "Developed Angular components and responsive layouts ensuring accessibility across devices and browsers.",
+      "Deployed and monitored production workloads on AWS Lambda and EC2, improving uptime and scalability.",
+      "Integrated .NET APIs for content management and authentication workflows with focus on security and performance.",
+      "Optimised frontend performance by profiling components and reducing load times through asset compression and caching."
     ],
     "icon": "laptop"
   }
