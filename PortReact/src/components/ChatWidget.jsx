@@ -14,27 +14,27 @@ function useAutoscroll(dep) {
   return ref;
 }
 
-function Message({ role, text }) {
+function Message({ role, text, attachments = [] }) {
   const isUser = role === "user";
   return (
     <div className={`flex gap-3 ${isUser ? "justify-end" : "justify-start"}`}>
-      {!isUser && (
-        <div className="h-8 w-8 shrink-0 rounded-full bg-black text-white grid place-content-center">
-          🤖
-        </div>
-      )}
-      <div
-        className={`max-w-[80%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed shadow-sm ${
-          isUser ? "bg-black text-white" : "bg-gray-100 text-gray-900"
-        }`}
-      >
-        {text}
+      {!isUser && (<div className="h-8 w-8 shrink-0 rounded-full bg-black text-white grid place-content-center">🤖</div>)}
+      <div className={`max-w-[80%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed shadow-sm ${isUser ? "bg-black text-white" : "bg-gray-100 text-gray-900"}`}>
+        <div>{text}</div>
+       {attachments.length > 0 && (
+         <div className="mt-2 flex flex-wrap gap-2">
+           {attachments.map((a, i) => (
+             <a key={i} href={a.url} target="_blank" rel="noopener noreferrer"
+                download={a.filename || undefined}
+                className="inline-flex items-center gap-2 rounded-lg border px-3 py-1 text-sm bg-white hover:bg-gray-50"
+                title={a.filename || "Download"}>
+               📄 {a.filename || "Resume.pdf"}
+             </a>
+           ))}
+         </div>
+       )}
       </div>
-      {isUser && (
-        <div className="h-8 w-8 shrink-0 rounded-full bg-gray-200 grid place-content-center">
-          🧑
-        </div>
-      )}
+      {isUser && (<div className="h-8 w-8 shrink-0 rounded-full bg-gray-200 grid place-content-center">🧑</div>)}
     </div>
   );
 }
@@ -116,7 +116,8 @@ export default function ChatWidget() {
 
       const data = await r.json();
       const reply = data?.reply ?? "Sorry, I didn’t catch that.";
-      setMessages((m) => [...m, { role: "assistant", content: reply }]);
+      const attachments = data?.attachments ?? [];
+      setMessages((m) => [...m, { role: "assistant", content: reply, attachments }]);
     } catch {
       setMessages((m) => [
         ...m,
@@ -132,21 +133,25 @@ export default function ChatWidget() {
   return createPortal(
     <>
       {/* FAB */}
-      <button
-        type="button"
-        onClick={() => {
-          setOpen(true);
-          setTimeout(() => inputRef.current?.focus(), 50);
-        }}
-        aria-label="Open chat"
-        className="fixed z-[2147483647]
-                   right-[calc(16px+env(safe-area-inset-right,0px))]
-                   bottom-[calc(16px+env(safe-area-inset-bottom,0px))]
-                   h-14 w-14 rounded-full bg-white shadow-xl text-2xl
-                   grid place-content-center border border-gray-200"
-      >
-        💬
-      </button>
+{/* FAB: Chat with Ryan */}
+<button
+  type="button"
+  onClick={() => {
+    setOpen(true);
+    setTimeout(() => inputRef.current?.focus(), 50);
+  }}
+  aria-label="Open Chat with Ryan"
+  className="fixed z-[2147483647] right-[calc(24px+env(safe-area-inset-right,0px))]
+             bottom-[calc(24px+env(safe-area-inset-bottom,0px))]
+             flex items-center gap-2 rounded-full px-5 py-3
+             bg-gradient-to-r from-sky-500 to-blue-600 text-white
+             shadow-xl hover:from-sky-600 hover:to-blue-700
+             transition-transform duration-300 hover:scale-105"
+>
+  <span className="text-lg">💬</span>
+  <span className="font-medium">Chat with Ryan</span>
+</button>
+
 
       {/* Optional visual backdrop (doesn't block clicks) */}
       {open && (
@@ -157,83 +162,90 @@ export default function ChatWidget() {
       )}
 
       {/* Floating panel */}
-      {open && (
-        <div
-          className="fixed z-[2147483647]
-                     right-[calc(20px+env(safe-area-inset-right,0px))]
-                     bottom-[calc(20px+env(safe-area-inset-bottom,0px))]"
-        >
-          <div
-            id="chat-panel"
-            className="w-[92vw] max-w-[420px]
-                       h-[70vh] max-h-[640px]
-                       bg-white rounded-2xl shadow-2xl flex flex-col"
-            role="dialog"
-            aria-label="Chat with Ryan"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b">
-              <div className="font-semibold">Chat with Ryan</div>
-              <button
-                type="button"
-                className="text-xl leading-none"
-                aria-label="Close chat"
-                onClick={() => setOpen(false)}
-              >
-                ✕
-              </button>
-            </div>
+{open && (
+  <div
+    onClick={() => setOpen(false)}
+    className="fixed inset-0 bg-black/30 backdrop-blur-[1px]
+               z-[2147483646] opacity-100 transition-opacity"
+    aria-hidden="true"
+  />
+)}
 
-            {/* Messages */}
-            <div ref={scrollRef} className="flex-1 overflow-auto p-3 space-y-3">
-              {messages.map((m, i) => (
-                <Message
-                  key={i}
-                  role={m.role === "assistant" ? "assistant" : "user"}
-                  text={m.content}
-                />
-              ))}
-              {busy && (
-                <div className="flex gap-3">
-                  <div className="h-8 w-8 shrink-0 rounded-full bg-black text-white grid place-content-center">
-                    🤖
-                  </div>
-                  <div className="bg-gray-100 rounded-2xl px-3.5 py-2 text-sm shadow-sm">
-                    <span className="inline-flex gap-1">
-                      <span className="animate-pulse">●</span>
-                      <span className="animate-pulse [animation-delay:150ms]">
-                        ●
-                      </span>
-                      <span className="animate-pulse [animation-delay:300ms]">
-                        ●
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              )}
-            </div>
+{/* Popup panel */}
+<div
+  className={`fixed z-[2147483647]
+              right-[calc(20px+env(safe-area-inset-right,0px))]
+              bottom-[calc(20px+env(safe-area-inset-bottom,0px))]
+              w-[92vw] max-w-[420px] 
+              transition-all duration-300
+              ${open ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'}`}
+  role="dialog"
+  aria-label="Chat with Ryan"
+  aria-modal="true"
+>
+  <div className="bg-white rounded-2xl shadow-2xl flex flex-col h-[70vh] max-h-[640px] border">
+    {/* Header */}
+    <div className="flex items-center justify-between px-4 py-3 
+                    bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-t-2xl">
+      <div className="flex items-center gap-2">
+        <div className="h-8 w-8 rounded-full bg-white text-blue-600 grid place-content-center text-lg shadow-md">
+          🤖
+        </div>
+        <div className="font-semibold">Chat with Ryan</div>
+      </div>
+      <button
+        type="button"
+        className="text-xl leading-none hover:text-gray-200"
+        aria-label="Close chat"
+        onClick={() => setOpen(false)}
+      >
+        ✕
+      </button>
+    </div>
 
-            {/* Input */}
-            <form onSubmit={send} className="border-t p-3 flex gap-2">
-              <input
-                ref={inputRef}
-                value={msg}
-                onChange={(e) => setMsg(e.target.value)}
-                placeholder="Type a message…"
-                className="flex-1 h-10 px-3 border rounded-lg focus:outline-none
-                           focus:ring-2 focus:ring-black/20"
-              />
-              <button
-                type="submit"
-                disabled={busy}
-                className="h-10 px-4 rounded-lg bg-black text-white disabled:opacity-50"
-              >
-                Send
-              </button>
-            </form>
+    {/* Messages (keep your existing renderer) */}
+    <div ref={scrollRef} className="flex-1 overflow-auto p-3 space-y-3 bg-white">
+      {messages.map((m, i) => (
+        <Message
+          key={i}
+          role={m.role === "assistant" ? "assistant" : "user"}
+          text={m.content}
+          attachments={m.attachments}
+        />
+      ))}
+      {busy && (
+        <div className="flex gap-3">
+          <div className="h-8 w-8 shrink-0 rounded-full bg-black text-white grid place-content-center">🤖</div>
+          <div className="bg-gray-100 rounded-2xl px-3.5 py-2 text-sm shadow-sm">
+            <span className="inline-flex gap-1">
+              <span className="animate-pulse">●</span>
+              <span className="animate-pulse [animation-delay:150ms]">●</span>
+              <span className="animate-pulse [animation-delay:300ms]">●</span>
+            </span>
           </div>
         </div>
       )}
+    </div>
+
+    {/* Input */}
+    <form onSubmit={send} className="border-t p-3 flex gap-2">
+      <input
+        ref={inputRef}
+        value={msg}
+        onChange={(e) => setMsg(e.target.value)}
+        placeholder="Ask about my projects or resume…"
+        className="flex-1 h-10 px-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"
+      />
+      <button
+        type="submit"
+        disabled={busy}
+        className="h-10 px-4 rounded-lg bg-black text-white disabled:opacity-50"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
     </>,
     document.body
   );

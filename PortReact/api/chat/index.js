@@ -20,6 +20,27 @@ module.exports = async function (context, req) {
       return;
     }
 
+    
+    // resume
+    const RESUME_URL   = process.env.RESUME_URL; // e.g. https://yourdomain/cv/Ryan_Maddumahewa_Resume.pdf
+    const RESUME_NAME  = process.env.RESUME_NAME || "Maddumahewa_Ryan_Resume.pdf";
+    const wantResume = /\b(resume|résumé|cv|curriculum\s*vitae)\b/i.test(message);
+
+    context.log("wantResume?", wantResume, "RESUME_URL?", !!RESUME_URL);
+
+    if (wantResume && RESUME_URL) {
+      context.res = {
+        headers: { "Content-Type": "application/json" },
+        body: {
+          reply: "Here’s my latest resume. Would you like the .docx version or email it to you as well?",
+          attachments: [
+            { type: "file", url: RESUME_URL, filename: RESUME_NAME, mime: "application/pdf" }
+          ]
+        }
+      };
+      return;
+    }
+
     const shortHistory = Array.isArray(history) ? history.slice(-4) : [];
     const body = {
       messages: [
