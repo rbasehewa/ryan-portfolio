@@ -1,6 +1,6 @@
 [
     {
-    "title": "Angular + Gemini AI – Self Service Demo",
+    "title": "Smart Filters with AI",
     "imageSrc": "projects/project7.png",
     "description": "AI-powered Angular demo where users query staff data using natural language via Express Gemini proxy",
     "skills": ["Angular", "Tailwind CSS", "Express", "GEN AI"],
