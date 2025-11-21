@@ -2,8 +2,8 @@
     {
     "title": "Angular + Gemini AI – Self Service Demo",
     "imageSrc": "projects/project7.png",
-    "description": "AI-powered Angular demo where users query staff data using natural language via a Node/Express Gemini proxy",
-    "skills": ["Angular", "TypeScript", "Tailwind CSS", "Node", "Express", "Google Gemini API"],
+    "description": "AI-powered Angular demo where users query staff data using natural language via Express Gemini proxy",
+    "skills": ["Angular", "Tailwind CSS", "Express", "GEN AI"],
     "demo": "https://www.youtube.com/watch?v=0WzRu59DRXs",
     "source": "https://github.com/rbasehewa/Self-Service-APP-RPH"
   },
