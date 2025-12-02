@@ -25,8 +25,8 @@ export const Hero = () => {
 
         {/* Tagline (kept) + WCAG tooltip */}
         <p className={styles.tagline}>
-          Frontend-focused full-stack developer <strong>AI generalist </strong>{" "} <strong>Angular</strong> {" "}
-          <strong>.NET</strong> <strong>PostgreSQL</strong>{" "}
+          Web | AI | RPA Full-stack developer <strong>AI generalist </strong>{" "} <strong>Angular</strong> {" "}
+          <strong>.NET</strong> <strong>Django</strong> <strong>PostgreSQL</strong>{" "}
           <strong>Azure</strong> 
         </p>
 
@@ -43,7 +43,7 @@ export const Hero = () => {
               speed={55}
               delay={200}
               text={
-                "AI & Industry Expertise: Development experience, integrating cutting-edge AI (Gemini, GPT) with a strong background in Angular and .NET."
+                "AI & Industry Expertise: Development experience, integrating cutting-edge AI (Gemini, GPT) with a strong background in Angular, Django and .NET."
               }
               strongRanges={[
                 { start: 9, end: 23 }, // digital systems

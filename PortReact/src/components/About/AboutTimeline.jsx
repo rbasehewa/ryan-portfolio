@@ -80,12 +80,13 @@ const M = [
   },
   {
     range: "Jan 2024–Present",
-    title: "Ocean Health Systems · Software Engineer (Angular & .NET 8)",
+    title: "Ocean Health Systems · Software Engineer",
     data: [
-      { name: "Angular", value: 50 },
-      { name: ".NET/C#", value: 30 },
+      { name: "Angular", value: 30 },
+      { name: ".NET/C#", value: 20 },
+      { name: "Django", value: 20 },
       { name: "Azure", value: 10 },
-      { name: "REST APIs", value: 10 },
+      { name: "REST APIs", value: 20 },
     ],
   },
 ];

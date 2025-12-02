@@ -28,6 +28,8 @@
       "title": "MongoDB",
       "imageSrc": "skills/mongodb.png"
     },
+      { "title": "Uipath", "imageSrc": "skills/uipath.png" },
+    { "title": "Django", "imageSrc": "skills/django.png" },
     {
       "title": ".NET",
       "imageSrc": "skills/net.png"
