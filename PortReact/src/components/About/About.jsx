@@ -49,7 +49,26 @@ export const About = () => {
                 <strong>Ocean Health Systems</strong>
               </h3>
               <p className={styles.itemBody}>
-                At Ocean Health Systems, I delivered a fully functional Immuniser Dashboard that centralised vaccination management, improving data accessibility and efficiency across multiple hospitals. I integrated an end-to-end testing framework using Playwright and automated it in Azure DevOps pipelines, improving release reliability and cutting regression time by 40%. I implemented role-based user management and real-time audit logging, enhancing system security and compliance with healthcare standards. Additionally, I led the migration of frontend components to Angular standalone architecture, improving maintainability and load performance by 25%.
+                <li>
+                  **Delivered a fully functional Immuniser Dashboard**,
+                  centralizing vaccination management, which **improved data
+                  accessibility and efficiency** across multiple hospitals.
+                </li>
+                <li>
+                  **Automated end-to-end testing** (Playwright) in Azure DevOps
+                  pipelines, **improving release reliability and cutting
+                  regression time by 40%.**
+                </li>
+                <li>
+                  **Implemented role-based security and audit logging**,
+                  significantly **enhancing system security and compliance**
+                  with healthcare standards.
+                </li>
+                <li>
+                  **Led the migration of frontend components to Angular
+                  standalone architecture**, resulting in **improved
+                  maintainability and load performance by 25%.**
+                </li>{" "}
               </p>
             </div>
           </li>
@@ -66,9 +85,24 @@ export const About = () => {
               <h3 className={styles.itemTitle}>
                 <strong>Vocus Group — Digital (Dodo & iPrimus)</strong>
               </h3>
-              <p className={styles.itemBody}>
-                At Vocus Group, I led a complete UI refresh for the mobile sales funnel flow, resulting in a significant increase in new user conversions within the first few months. I completely redesigned the energy sales funnel UI, leading to higher customer completion rates and an improved user experience. Furthermore, I delivered a faster, more responsive frontend that increased engagement and reduced bounce rates, directly contributing to improved business retention and revenue growth.
-              </p>
+              <ul className={styles.itemBody}>
+                <li>
+                  **Led a complete UI refresh for the mobile sales funnel**,
+                  resulting in a **significant increase in new user
+                  conversions** within the first few months.
+                </li>
+                <li>
+                  **Redesigned the energy sales funnel UI**, leading to **higher
+                  customer completion rates** and a dramatically improved user
+                  experience.
+                </li>
+                <li>
+                  **Delivered a faster, more responsive frontend** that
+                  **increased user engagement and reduced bounce rates**,
+                  directly contributing to **improved business retention and
+                  revenue growth.**
+                </li>
+              </ul>
             </div>
           </li>
 
@@ -86,7 +120,13 @@ export const About = () => {
                 <strong>Early Web Development (.NET & Full-Stack)</strong>
               </h3>
               <p className={styles.itemBody}>
-                My early career began as a .NET developer, creating scalable enterprise applications for logistics and SME clients. I later transitioned into full-stack JavaScript development, gaining experience in RESTful API design, authentication workflows, and cloud deployment on Azure and AWS. These experiences helped shape my foundation in building secure, maintainable, and user-centric applications.
+                My early career began as a .NET developer, creating scalable
+                enterprise applications for logistics and SME clients. I later
+                transitioned into full-stack JavaScript development, gaining
+                experience in RESTful API design, authentication workflows, and
+                cloud deployment on Azure and AWS. These experiences helped
+                shape my foundation in building secure, maintainable, and
+                user-centric applications.
               </p>
             </div>
           </li>
