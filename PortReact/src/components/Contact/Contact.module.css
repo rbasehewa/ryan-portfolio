@@ -1,95 +1,150 @@
 @import "../../vars.css";
 
-
 .container {
-    color: var(--color-text);
-    background-color: var(--color-secondary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100vw;
-    padding: 58px 10%;
-    gap: 10px;
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 58px 10%;
+  gap: 40px;
+}
 
+/* left side: heading + links */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .text h2 {
-    font-size: 80px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .text p {
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-    gap: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 26px;
+  padding: 0;
+  margin: 0;
 }
 
 .link {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .link a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
 }
 
+.icon {
+  font-size: 30px;
+}
+
+.linkText {
+  white-space: nowrap;
+}
+
+/* booking block (right side) */
+.bookingSection {
+  flex: 1;
+  background: linear-gradient(135deg, #19376d, #0b2447);
+  border-radius: 18px;
+  padding: 24px 24px 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bookingTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bookingSubtitle {
+  font-size: 16px;
+  margin: 0 0 8px;
+  opacity: 0.9;
+}
+
+.bookingFrameWrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.bookingFrame {
+  width: 100%;
+  min-height: 520px; /* adjust if needed */
+  border: 0;
+}
+
+/* responsive */
 @media screen and (max-width: 830px) {
-    .container {
-        flex-direction: column;
-        gap: 20px; 
-        padding: 10px 5%; 
-    }
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 5%;
+  }
 
-    .text h2 {
-        text-align: center;
-        font-size: 28px; 
-        margin-top: 10px; 
-        margin-bottom: 5px; 
-    }
+  .text h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 
-    .text p {
-        text-align: center;
-        font-size: 18px; 
-    }
+  .text p {
+    text-align: center;
+    font-size: 18px;
+  }
 
-    .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px; 
-    }
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
 
-    .links {
-        align-items: center;
-        gap: 10px; 
-        flex-flow: wrap;
-    }
+  .links {
+    align-items: center;
+    gap: 10px;
+    flex-flow: wrap;
+  }
 
-    .link {
-        gap: 10px; 
-    }
+  .link {
+    gap: 10px;
+  }
 
-    .link img {
-        max-width: 40px;
-        height: auto;
-    }
+  .link a {
+    font-size: 16px;
+  }
 
-    .link a {
-        font-size: 16px; 
-    }
+  .bookingSection {
+    padding: 18px 16px;
+  }
+
+  .bookingFrame {
+    min-height: 460px;
+  }
 }
