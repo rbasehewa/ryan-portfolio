@@ -48,28 +48,28 @@ export const About = () => {
               <h3 className={styles.itemTitle}>
                 <strong>Ocean Health Systems</strong>
               </h3>
-              <p className={styles.itemBody}>
+              <ul className={styles.itemBody}>
                 <li>
-                  **Delivered a fully functional Immuniser Dashboard**,
-                  centralizing vaccination management, which **improved data
-                  accessibility and efficiency** across multiple hospitals.
+                  Built a hospital-wide Immuniser Dashboard used across multiple
+                  clinical teams.
                 </li>
                 <li>
-                  **Automated end-to-end testing** (Playwright) in Azure DevOps
-                  pipelines, **improving release reliability and cutting
-                  regression time by 40%.**
+                  Reduced manual vaccination admin effort by centralising staff
+                  health records.
                 </li>
                 <li>
-                  **Implemented role-based security and audit logging**,
-                  significantly **enhancing system security and compliance**
-                  with healthcare standards.
+                  Cut regression testing time by <strong>40%</strong> by
+                  introducing Playwright automation in Azure DevOps.
                 </li>
                 <li>
-                  **Led the migration of frontend components to Angular
-                  standalone architecture**, resulting in **improved
-                  maintainability and load performance by 25%.**
+                  Improved system security with full role-based access control
+                  and real-time audit logs.
+                </li>
+                <li>
+                  Boosted frontend performance by <strong>25%</strong> after
+                  migrating to Angular standalone architecture.
                 </li>{" "}
-              </p>
+              </ul>
             </div>
           </li>
 
@@ -87,20 +87,24 @@ export const About = () => {
               </h3>
               <ul className={styles.itemBody}>
                 <li>
-                  **Led a complete UI refresh for the mobile sales funnel**,
-                  resulting in a **significant increase in new user
-                  conversions** within the first few months.
+                  Led full UI redesign of mobile sales funnels for Dodo &
+                  iPrimus.
                 </li>
                 <li>
-                  **Redesigned the energy sales funnel UI**, leading to **higher
-                  customer completion rates** and a dramatically improved user
-                  experience.
+                  Increased new customer conversion rates within months of
+                  launch.
                 </li>
                 <li>
-                  **Delivered a faster, more responsive frontend** that
-                  **increased user engagement and reduced bounce rates**,
-                  directly contributing to **improved business retention and
-                  revenue growth.**
+                  Improved checkout completion through UX optimisation of energy
+                  sales flows.
+                </li>
+                <li>
+                  Reduced bounce rates by delivering faster, mobile-first
+                  responsive interfaces.
+                </li>
+                <li>
+                  Directly contributed to revenue growth through improved funnel
+                  performance.
                 </li>
               </ul>
             </div>
@@ -119,15 +123,25 @@ export const About = () => {
               <h3 className={styles.itemTitle}>
                 <strong>Early Web Development (.NET & Full-Stack)</strong>
               </h3>
-              <p className={styles.itemBody}>
-                My early career began as a .NET developer, creating scalable
-                enterprise applications for logistics and SME clients. I later
-                transitioned into full-stack JavaScript development, gaining
-                experience in RESTful API design, authentication workflows, and
-                cloud deployment on Azure and AWS. These experiences helped
-                shape my foundation in building secure, maintainable, and
-                user-centric applications.
-              </p>
+              <ul className={styles.itemBody}>
+                <li>
+                  Developed enterprise .NET systems used by logistics and SME
+                  clients.
+                </li>
+                <li>
+                  Designed secure REST APIs with authentication and role-based
+                  security.
+                </li>
+                <li>Deployed production systems on Microsoft Azure and AWS.</li>
+                <li>
+                  Built scalable full-stack JavaScript applications with modern
+                  frameworks.
+                </li>
+                <li>
+                  Established strong foundations in secure, maintainable system
+                  design.
+                </li>
+              </ul>
             </div>
           </li>
 
