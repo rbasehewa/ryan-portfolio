@@ -135,8 +135,8 @@
     text-justify: inter-word;
     text-align-last: left;
     line-height: 1.55;
-    max-width: 60ch;
     margin: 4px 0 0;
+    font-weight: 300;
 }
 
 /* Body when it's a bullet list (OHS / Vocus / Early Web) */
@@ -147,7 +147,7 @@
     padding-left: 1.2rem;
     list-style: disc;
     line-height: 1.55;
-    max-width: 60ch;
+    font-weight: 300;
 }
 
 .aboutItemText ul.itemBody li {
