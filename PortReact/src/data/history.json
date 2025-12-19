@@ -1,17 +1,18 @@
 [
   {
-    "role": "Software Engineer",
+    "role": "Software Developer",
     "organisation": "Ocean Health Systems",
     "startDate": "Jan 2024",
     "endDate": "Present",
-    "summary": "Frontend-focused Software Engineer developing secure, high-performance healthcare web applications using Angular and .NET 8. Responsible for UI/UX design, data confidentiality, and CI/CD delivery through Azure DevOps.",
-    "techStack": "Angular 17–21, TypeScript, PrimeNG, Tailwind CSS, .NET 8, Auth0, REST API, Azure DevOps, Playwright",
+    "summary": "Software Developer delivering Microsoft Power Platform solutions including Canvas Apps and Power Automate to improve day to day healthcare operations. Also supports .NET and Angular applications with a focus on secure integration, data protection, and reliable delivery through Azure DevOps.",
+    "techStack": "Power Apps (Canvas), Power Automate, Power Fx, Angular 12–21, TypeScript, PrimeNG, Tailwind CSS, .NET 8, Auth0, REST API, Azure DevOps, Playwright",
     "experiences": [
-      "Designed and implemented the Immuniser Dashboard, centralising vaccination management across hospitals and improving efficiency.",
-      "Handled sensitive hospital staff vaccination data with strict confidentiality, implementing role-based access and audit logging.",
-      "Integrated with the Australian Immunisation Register (AIR) via REST APIs using Auth0-secured authentication and token management.",
-      "Automated Playwright E2E testing within Azure CI/CD pipelines, improving release reliability and cutting regression time by 40%.",
-      "Migrated frontend modules to Angular standalone architecture, improving maintainability and reducing load time by 25%."
+      "Reduced manual processing by digitising internal workflows using Canvas Apps.",
+      "Improved turnaround times by automating approvals, notifications, and system updates using Power Automate.",
+      "Applied role based access controls and audit logging to support secure handling of sensitive healthcare data.",
+      "Integrated with external systems including the Australian Immunisation Register (AIR) via REST APIs using Auth0 secured authentication.",
+      "Cut regression testing time by 40% by introducing Playwright E2E automation in Azure DevOps pipelines.",
+      "Improved performance by 25% through Angular standalone migration and frontend optimisation."
     ],
     "icon": "hospital"
   },

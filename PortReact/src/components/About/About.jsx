@@ -49,26 +49,15 @@ export const About = () => {
                 <strong>Ocean Health Systems</strong>
               </h3>
               <ul className={styles.itemBody}>
-                <li>
-                  Built a hospital-wide Immuniser Dashboard used across multiple
-                  clinical teams.
-                </li>
-                <li>
-                  Reduced manual vaccination admin effort by centralising staff
-                  health records.
-                </li>
-                <li>
-                  Cut regression testing time by <strong>40%</strong> by
-                  introducing Playwright automation in Azure DevOps.
-                </li>
-                <li>
-                  Improved system security with full role-based access control
-                  and real-time audit logs.
-                </li>
-                <li>
-                  Boosted frontend performance by <strong>25%</strong> after
-                  migrating to Angular standalone architecture.
-                </li>{" "}
+                <li>Built Canvas Apps to support internal healthcare workflows.</li>
+                <li>Developed Power Automate flows for approvals, notifications, and system updates.</li>
+                <li>Cut regression testing time by <strong>40%</strong> using Playwright in Azure DevOps.</li>
+                <li>Improved system security with role based access control and audit logs.</li>
+                <li>Boosted frontend performance by <strong>25%</strong> through Angular standalone migration.</li>
+
+                <li><strong>Business impact:</strong></li>
+                <li>Reduced manual processing and improved turnaround times for operational teams.</li>
+                <li>Improved release confidence by reducing regression effort and stabilising deployments.</li>
               </ul>
             </div>
           </li>
