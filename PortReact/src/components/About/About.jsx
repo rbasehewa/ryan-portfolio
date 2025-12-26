@@ -76,8 +76,7 @@ export const About = () => {
               </h3>
               <ul className={styles.itemBody}>
                 <li>
-                  Led full UI redesign of mobile sales funnels for Dodo &
-                  iPrimus.
+                  Maintained and improved front-end codebases with a strong emphasis on scalability, readability, and cross-team collaboration.
                 </li>
                 <li>
                   Increased new customer conversion rates within months of

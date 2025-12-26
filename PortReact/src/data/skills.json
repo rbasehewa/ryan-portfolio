@@ -3,10 +3,13 @@
       "title": "HTML",
       "imageSrc": "skills/html.png"
     },
+    { "title": "wordpress", "imageSrc": "skills/wordpress.png" },
     {
       "title": "CSS",
       "imageSrc": "skills/css.png"
     },
+          { "title": "framer", "imageSrc": "skills/framer.png" },
+                { "title": "Webflow", "imageSrc": "skills/webflow.png" },
     {
       "title": "React",
       "imageSrc": "skills/react.png"

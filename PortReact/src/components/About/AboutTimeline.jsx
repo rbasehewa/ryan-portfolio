@@ -7,6 +7,9 @@ const COLOR_MAP = {
   React: "var(--color-react)",
   ".NET/C#": "var(--color-dotnet)",
   Linux: "var(--color-linux)",
+    Framer: "var(--color-framer)",
+    Webflow: "var(--color-webflow)",
+  WordPress: "var(--color-wordpress)",  
   AWS: "var(--color-aws)",
   "Soft Skills": "var(--color-soft)",
 
@@ -23,7 +26,8 @@ const M = [
     range: "2013–2016",
     title: "Associate Software Engineer (Healthcare, LK)",
     data: [
-      { name: ".NET/C#", value: 70 },
+      { name: ".NET/C#", value: 40 },
+      { name: "supporting CMS and digital platforms", value: 30 },
       { name: "REST APIs", value: 20 },
       { name: "Soft Skills", value: 10 },
     ],
@@ -52,9 +56,9 @@ const M = [
     range: "2019–2020",
     title: "ITechYouLearn (EdTech) · Software Developer",
     data: [
-      { name: ".NET/C#", value: 35 },
+      { name: ".Node.js", value: 35 },
       { name: "React", value: 25 },
-      { name: "AWS", value: 25 },
+      { name: "WordPress", value: 25 },
       { name: "REST APIs", value: 15 },
     ],
   },
@@ -62,9 +66,10 @@ const M = [
     range: "2020–2021",
     title: "ZippyCrowd · Frontend Developer",
     data: [
-      { name: "React", value: 60 },
-      { name: "REST APIs", value: 25 },
-      { name: "Soft Skills", value: 15 },
+      { name: "React", value: 30 },
+      { name: "WordPress", value: 25 },
+      { name: "Framer", value: 15 },
+      { name: "Webflow", value: 15 },
     ],
   },
   {
@@ -86,7 +91,8 @@ const M = [
       { name: ".NET/C#", value: 20 },
       { name: "Django", value: 20 },
       { name: "Azure", value: 10 },
-      { name: "REST APIs", value: 20 },
+      { name: "Webflow", value: 10 },
+      { name: "WordPress", value: 10 },
     ],
   },
 ];
