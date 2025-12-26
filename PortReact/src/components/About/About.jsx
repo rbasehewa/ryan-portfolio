@@ -51,7 +51,7 @@ export const About = () => {
               <ul className={styles.itemBody}>
                 <li>Built Canvas Apps to support internal healthcare workflows.</li>
                 <li>Developed Power Automate flows for approvals, notifications, and system updates.</li>
-                <li>Cut regression testing time by <strong>40%</strong> using Playwright in Azure DevOps.</li>
+                <li>Used WordPress and Webflow to integrate and manage scalable, CMS-driven websites.</li>
                 <li>Improved system security with role based access control and audit logs.</li>
                 <li>Boosted frontend performance by <strong>25%</strong> through Angular standalone migration.</li>
                 <br />
