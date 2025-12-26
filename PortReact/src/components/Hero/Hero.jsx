@@ -25,7 +25,7 @@ export const Hero = () => {
 
         {/* Tagline (kept) + WCAG tooltip */}
         <p className={styles.tagline}>
-        Web | AI | RPA | Full stack developer | <strong>Power Platform</strong> | Angular | .NET | Django | PostgreSQL | Azure
+        Web CMS | AI | Full stack developer | Power Platform | Angular | .NET | Django | PostgreSQL | Azure
         </p>
 
         {/* Bullet list with ticks */}

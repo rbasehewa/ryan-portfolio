@@ -37,4 +37,12 @@
     /* Salesforce blue */
     --color-azure: #0078d4;
     /* Azure blue */
+    --color-wordpress: #2191ff;
+    /* WordPress blue */
+    --color-webflow: #4f39f6;
+    /* Webflow blue */
+    --color-framer: #207196;
+    /* Framer blue */
+    --color-Django: #092d1f;
+    /* Django blue */
 }
