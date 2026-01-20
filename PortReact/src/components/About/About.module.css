@@ -5,9 +5,8 @@
     background: #19376d;
     background: linear-gradient(90deg, #19376d, rgba(25, 55, 109, 0) 100%);
     border-radius: 15px;
-    padding: 10px;
+    padding: 40px;
     margin-top: 0;
-    padding-top: 0;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
@@ -19,163 +18,148 @@
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1.75px;
-    margin-top: 0;
-    padding-top: 10px;
+    margin: 0 0 40px 0;
     text-transform: uppercase;
-    padding: 18px;
-}
-
-.itemHeader {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.icon {
-    color: var(--color-dark);
-    opacity: 1;
-    font-weight: 900;
-}
-
-.iconWrap {
-    width: 48px;
-    height: 48px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .12);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 48px;
-}
-
-.itemTitle {
-    color: var(--color-emerald);
-    margin: 0 0 4px 0;
-    line-height: 1.2;
-}
-
-/* was assuming text only before – now we let ul/p share base styles via .itemBody */
-.itemBody {
-    color: var(--color-text);
-    white-space: normal;
-    text-overflow: clip;
+    gap: 12px;
 }
 
 .content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 32px;
+    gap: 40px;
 }
 
 .aboutImage {
     width: 35%;
+    flex-shrink: 0;
 }
 
 .aboutItems {
-    color: var(--color-text);
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    gap: 24px;
+    flex: 1;
 }
 
 .aboutItem {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 12px;
-    align-items: start;
-    font-family: var(--font-roboto);
-    border-radius: 20px;
-    list-style: none;
-    padding: 25px;
-    background-image: linear-gradient(
-        90deg,
-        rgba(165, 215, 232, 0.42) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: 0.4s;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
 }
 
 .aboutItem:hover {
-    background-size: 100% 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(165, 215, 232, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.aboutItemText {
-    display: contents; /* children (h3, p, ul) become grid items */
+.itemHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
 }
 
-/* Title placement inside grid */
-.aboutItem h3 {
-    color: var(--color-emerald);
-    grid-column: 2;
-    grid-row: 1;
-    margin: 0 0 4px 0;
-    line-height: 1.2;
-}
-
-/* Icon placement inside grid */
-.aboutItem > .iconWrap {
-    grid-column: 1;
-    grid-row: 1;
-    align-self: center;
-}
-
-/* Body when it's a paragraph (Life Beyond Code) */
-.aboutItemText p.itemBody {
-    grid-column: 2;
-    grid-row: 2;
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: left;
-    line-height: 1.55;
-    margin: 4px 0 0;
-    font-weight: 300;
-}
-
-/* Body when it's a bullet list (OHS / Vocus / Early Web) */
-.aboutItemText ul.itemBody {
-    grid-column: 2;
-    grid-row: 2;
-    margin: 6px 0 0;
-    padding-left: 1.2rem;
-    list-style: disc;
-    line-height: 1.55;
-    font-weight: 300;
-}
-
-.aboutItemText ul.itemBody li {
-    margin-bottom: 0.35rem;
-}
-
-/* re-declare to avoid accidental override below */
 .iconWrap {
-    width: 48px;
-    height: 48px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .12);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18);
-    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(165, 215, 232, 0.2), rgba(165, 215, 232, 0.05));
+    border: 1px solid rgba(165, 215, 232, 0.2);
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 48px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.aboutItem:hover .iconWrap {
+    background: linear-gradient(135deg, rgba(165, 215, 232, 0.3), rgba(165, 215, 232, 0.1));
+    border-color: rgba(165, 215, 232, 0.4);
+}
+
+.icon {
+    color: var(--color-emerald);
+    opacity: 0.9;
+}
+
+.itemTitle {
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+}
+
+.itemBody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--color-text);
+    font-size: 15px;
+    line-height: 1.65;
+    font-weight: 300;
+}
+
+/* For the Life Beyond Code paragraph */
+.lifeBeyondText {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    line-height: 1.65;
+    font-weight: 300;
+}
+
+.achievement {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0;
+}
+
+.checkIcon {
+    color: var(--color-emerald);
+    font-size: 16px;
+    margin-top: 4px;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.achievement p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    flex: 1;
+}
+
+.achievement strong {
+    color: var(--color-text);
+    font-weight: 500;
 }
 
 @media screen and (max-width: 830px) {
     .container {
         background-color: transparent;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 28px;
     }
 
     .content {
         flex-direction: column;
+        gap: 24px;
     }
 
     .aboutImage {
@@ -183,10 +167,31 @@
     }
 
     .aboutItems {
-        margin-top: 29px;
+        gap: 20px;
     }
 
     .aboutItem {
-        padding: 18px;
+        padding: 20px;
+    }
+
+    .itemHeader {
+        margin-bottom: 16px;
+    }
+
+    .itemTitle {
+        font-size: 18px;
+    }
+
+    .itemBody {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .achievement {
+        gap: 10px;
+    }
+
+    .checkIcon {
+        font-size: 14px;
     }
 }
