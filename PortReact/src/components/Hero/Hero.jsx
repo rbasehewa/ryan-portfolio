@@ -25,7 +25,7 @@ export const Hero = () => {
 
         {/* Tagline (kept) + WCAG tooltip */}
         <p className={styles.tagline}>
-        Web CMS using AI | Full stack developer | Power Platform and Azure DevOps (Microsoft Certified) | Angular | .NET | Django | PostgreSQL
+        Angular 17+ • .NET 8 • Power Platform • Azure DevOps • AI Integration
         </p>
 
         {/* Bullet list with ticks */}
@@ -41,7 +41,7 @@ export const Hero = () => {
               speed={55}
               delay={200}
               text={
-                "AI & Industry Expertise: Development experience, integrating cutting-edge AI (Gemini, GPT) with a strong background in Angular, Django and .NET."
+                "AI Expertise: Integrating Claude, Gemini, and GPT into production Angular/.NET applications."
               }
               strongRanges={[
                 { start: 9, end: 23 }, // digital systems
@@ -62,7 +62,7 @@ export const Hero = () => {
               speed={55}
               delay={1800}
               text={
-                "Sensitive Data Handling: Proven track record of working with sensitive data in both healthcare and telecom domains, ensuring data privacy and quality development."
+                "Healthcare Security: HIPAA-compliant systems with encryption, access controls, and audit trails."
               }
               strongRanges={[
                 { start: 16, end: 34 }, // privacy-by-design
