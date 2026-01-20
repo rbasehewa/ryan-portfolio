@@ -25,7 +25,7 @@ export const Navbar = () => {
         >
           <span className={styles.brandWrap} tabIndex={0}>
             <a className={styles.title} href="/">Ryan’s Studio</a>
-            <span className={styles.subtitle}>Full-Stack Development & AI Integration</span>
+            <span className={styles.subtitle}>Full-Stack Development</span>
           </span>
         </Tippy>
       </div>

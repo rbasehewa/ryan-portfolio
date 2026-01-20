@@ -76,9 +76,9 @@ const M = [
     range: "Oct 2021–Jan 2024",
     title: "Vocus Group (Dodo / iPrimus) · Frontend Engineer",
     data: [
-      { name: "Angular", value: 50 },
+      { name: "Angular", value: 40 },
       { name: "Salesforce", value: 20 },
-      { name: ".NET/C#", value: 10 },
+      { name: ".NET/C#", value: 20 },
       { name: "React", value: 10 },
       { name: "AWS", value: 10 },
     ],
@@ -88,11 +88,9 @@ const M = [
     title: "Ocean Health Systems · Software Engineer",
     data: [
       { name: "Angular", value: 30 },
-      { name: ".NET/C#", value: 20 },
+      { name: ".NET/C#", value: 30 },
       { name: "Django", value: 20 },
-      { name: "Azure", value: 10 },
-      { name: "Webflow", value: 10 },
-      { name: "WordPress", value: 10 },
+      { name: "MS Azure Cloud", value: 20 },
     ],
   },
 ];

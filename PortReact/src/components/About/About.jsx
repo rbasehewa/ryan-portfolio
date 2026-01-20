@@ -49,15 +49,13 @@ export const About = () => {
                 <strong>Ocean Health Systems</strong>
               </h3>
               <ul className={styles.itemBody}>
-                <li>Built Canvas Apps to support internal healthcare workflows.</li>
-                <li>Developed Power Automate flows for approvals, notifications, and system updates.</li>
-                <li>Used WordPress and Webflow to integrate and manage scalable, CMS-driven websites.</li>
-                <li>Improved system security with role based access control and audit logs.</li>
-                <li>Boosted frontend performance by <strong>25%</strong> through Angular standalone migration.</li>
-                <br />
-                <strong>Business impact:</strong>
-                <li>Reduced manual processing and improved turnaround times for operational teams.</li>
-                <li>Improved release confidence by reducing regression effort and stabilising deployments.</li>
+                <li>Migrated Angular applications to latest framework (v21) using <strong>signals</strong>, <strong>reactive forms</strong>, and standalone components with lazy loading for improved performance.</li>
+                <li>Implemented <strong>caching strategies</strong> and HTTP interceptors for optimised API calls and error handling across frontend and backend layers.</li>
+                <li>Applied <strong>role-based access controls (RBAC)</strong> and <strong>audit logging</strong> to support secure handling of sensitive healthcare data with full traceability.</li>
+                <li>Integrated with external systems including the Australian Immunisation Register (AIR) via REST APIs using <strong>Auth0</strong> secured authentication and token-based authorization.</li>
+                <li>Developed Power Automate flows for approvals, notifications, and system updates to improve turnaround times.</li>
+                <li>Established <strong>error logging</strong> and monitoring pipelines with structured exception handling to track system health and security events.</li>
+                <li>Cut regression testing time by <strong>40%</strong> by introducing Playwright E2E automation in Azure DevOps pipelines.</li>
               </ul>
             </div>
           </li>
@@ -76,23 +74,19 @@ export const About = () => {
               </h3>
               <ul className={styles.itemBody}>
                 <li>
-                  Maintained and improved front-end codebases with a strong emphasis on scalability, readability, and cross-team collaboration.
+                  Built and enhanced responsive sales funnels for mobile, broadband, and energy services, helping <strong>boost conversion rates by 12%</strong> and contributing to stronger customer acquisition.
                 </li>
                 <li>
-                  Increased new customer conversion rates within months of
-                  launch.
+                  Maintained and upgraded the MyDodo self-service portal serving <strong>200K+ customers</strong>, making it easier for them to manage internet, mobile, and energy accounts without calling support.
                 </li>
                 <li>
-                  Improved checkout completion through UX optimisation of energy
-                  sales flows.
+                  Integrated Salesforce CRM and MuleSoft REST APIs for real-time customer, billing, and order synchronisation using OpenAPI specs, <strong>cutting data errors by over half</strong>.
                 </li>
                 <li>
-                  Reduced bounce rates by delivering faster, mobile-first
-                  responsive interfaces.
+                  Delivered UX and performance improvements that <strong>reduced support call volumes by 15-20%</strong> and helped improve customer retention through a smoother online experience.
                 </li>
                 <li>
-                  Directly contributed to revenue growth through improved funnel
-                  performance.
+                  Mentored junior developers and actively contributed to design discussions on scalability, accessibility, and frontend best practices.
                 </li>
               </ul>
             </div>
@@ -109,25 +103,24 @@ export const About = () => {
 
             <div className={styles.aboutItemText}>
               <h3 className={styles.itemTitle}>
-                <strong>Early Web Development (.NET & Full-Stack)</strong>
+                <strong>ITechYouLearn — EdTech Platform</strong>
               </h3>
               <ul className={styles.itemBody}>
                 <li>
-                  Developed enterprise .NET systems used by logistics and SME
-                  clients.
+                  Built and maintained an e-learning platform serving <strong>10,000+</strong> users with course delivery, assessments, and student progress tracking.
                 </li>
                 <li>
-                  Designed secure REST APIs with authentication and role-based
-                  security.
-                </li>
-                <li>Deployed production systems on Microsoft Azure and AWS.</li>
-                <li>
-                  Built scalable full-stack JavaScript applications with modern
-                  frameworks.
+                  Developed Angular components and responsive layouts ensuring accessibility across devices and browsers.
                 </li>
                 <li>
-                  Established strong foundations in secure, maintainable system
-                  design.
+                  Deployed and monitored production workloads on AWS Lambda and EC2, improving uptime and scalability.
+                </li>
+                <li>
+                  Integrated Node.js and .NET APIs for content management and authentication workflows with focus on security and performance.
+                </li>
+                <li>Integrated WordPress and Webflow with modern frontend workflows for scalable, CMS-driven digital platforms.</li>
+                <li>
+                  Optimised frontend performance by profiling components and reducing load times through asset compression and caching.
                 </li>
               </ul>
             </div>
@@ -153,11 +146,11 @@ export const About = () => {
                 </Tippy>
               </h3>
               <p className={styles.itemBody}>
-                Proud dad of two {""}
+                Proud dad of two{" "}
                 <FontAwesomeIcon icon={faUserGroup} aria-hidden="true" />. I
-                recharge through cycling {""}
+                recharge through cycling{" "}
                 <FontAwesomeIcon icon={faBicycle} aria-hidden="true" /> and
-                gardening {""}
+                gardening{" "}
                 <FontAwesomeIcon icon={faSeedling} aria-hidden="true" />, which
                 keep my creativity grounded and energy balanced outside of
                 development.
