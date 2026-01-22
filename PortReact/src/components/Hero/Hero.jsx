@@ -25,7 +25,7 @@ export const Hero = () => {
 
         {/* Tagline (kept) + WCAG tooltip */}
         <p className={styles.tagline}>
-        Angular 17+ • .NET 8 • Power Platform • Azure DevOps • AI Integration
+        Angular 17+ • .NET Core • Power Platform • Azure DevOps • AI Integration
         </p>
 
         {/* Bullet list with ticks */}
