@@ -7,9 +7,9 @@ const COLOR_MAP = {
   React: "var(--color-react)",
   ".NET/C#": "var(--color-dotnet)",
   Linux: "var(--color-linux)",
-    Framer: "var(--color-framer)",
-    Webflow: "var(--color-webflow)",
-  WordPress: "var(--color-wordpress)",  
+  Framer: "var(--color-framer)",
+  Webflow: "var(--color-webflow)",
+  WordPress: "var(--color-wordpress)",
   AWS: "var(--color-aws)",
   "Soft Skills": "var(--color-soft)",
 
@@ -19,6 +19,11 @@ const COLOR_MAP = {
   "REST APIs": "var(--color-rest)",
   Salesforce: "var(--color-salesforce)",
   Azure: "var(--color-azure)",
+
+  // shelford
+  "Clean Architecture": "var(--color-dotnet)",
+  "Azure OpenAI": "var(--color-azure)",
+  "SQL Server": "var(--color-rest)",
 };
 
 const M = [
@@ -34,7 +39,7 @@ const M = [
   },
   {
     range: "2016–2018",
-    title: "Assistant Support Engineer (Linux) · Master’s",
+    title: "Assistant Support Engineer (Linux) · Master's",
     data: [
       { name: "Linux", value: 60 },
       { name: ".NET/C#", value: 20 },
@@ -84,13 +89,24 @@ const M = [
     ],
   },
   {
-    range: "Jan 2024–Present",
+    range: "Jan 2024–Mar 2026",
     title: "Ocean Health Systems · Software Engineer",
     data: [
       { name: "Angular", value: 30 },
       { name: ".NET/C#", value: 30 },
       { name: "Django", value: 20 },
       { name: "MS Azure Cloud", value: 20 },
+    ],
+  },
+  {
+    range: "Mar 2026–Present",
+    title: "Shelford Constructions · Full Stack Engineer",
+    data: [
+      { name: "Angular", value: 30 },
+      { name: ".NET/C#", value: 30 },
+      { name: "Clean Architecture", value: 20 },
+      { name: "Azure OpenAI", value: 10 },
+      { name: "SQL Server", value: 10 },
     ],
   },
 ];
@@ -106,8 +122,8 @@ const Dot = ({ color }) => (
 export default function AboutTimeline() {
   return (
     <div className="grid gap-12">
-{[...M].reverse().map((m) => (
-  <div key={`${m.range}-${m.title}`} className="flex items-center gap-6">
+      {[...M].reverse().map((m) => (
+        <div key={`${m.range}-${m.title}`} className="flex items-center gap-6">
           {/* mini pie */}
           <div className="h-28 w-28 shrink-0 rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur">
             <ResponsiveContainer>

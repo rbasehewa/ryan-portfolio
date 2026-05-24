@@ -50,7 +50,7 @@ export const About = () => {
                 />
               </span>
               <h3 className={styles.itemTitle}>
-                Shelford Constructions — Full Stack Engineer
+                Shelford Constructions
               </h3>
             </div>
 
@@ -61,7 +61,7 @@ export const About = () => {
               </div>
               <div className={styles.achievement}>
                 <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
-                <p>Architecting a <strong>Clean Architecture</strong> backend with domain-driven design, <strong>CQRS/MediatR</strong> patterns, and Dapper — with structured separation across Domain, Application, Infrastructure, and API layers.</p>
+                <p>Architecting a <strong>Clean Architecture</strong> backend with domain-driven design, <strong>CQRS/MediatR</strong> patterns, and Dapper  with structured separation across Domain, Application, Infrastructure, and API layers.</p>
               </div>
               <div className={styles.achievement}>
                 <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
@@ -77,7 +77,7 @@ export const About = () => {
               </div>
               <div className={styles.achievement}>
                 <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
-                <p>Leading end-to-end modernisation strategy — from legacy system analysis to greenfield architecture — delivering full-stack features including AI-powered job search using <strong>Azure OpenAI</strong>.</p>
+                <p>Leading end-to-end modernisation strategy from legacy system analysis to greenfield architecture delivering full stack features including AI-powered job search using <strong>Azure OpenAI</strong>.</p>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@ export const About = () => {
                 />
               </span>
               <h3 className={styles.itemTitle}>
-                Vocus Group — Digital (Dodo & iPrimus)
+                Vocus Group  Digital (Dodo & iPrimus)
               </h3>
             </div>
 
