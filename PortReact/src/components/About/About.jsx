@@ -167,7 +167,7 @@ export const About = () => {
           </div>
 
           {/* ITechYouLearn */}
-          <div className={styles.aboutItem}>
+          {/* <div className={styles.aboutItem}>
             <div className={styles.itemHeader}>
               <span className={styles.iconWrap} aria-hidden="true">
                 <FontAwesomeIcon
@@ -205,7 +205,7 @@ export const About = () => {
                 <p>Optimised frontend performance by profiling components and reducing load times through asset compression and caching.</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Life Beyond Code */}
           <div className={styles.aboutItem}>
