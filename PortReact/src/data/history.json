@@ -1,19 +1,36 @@
 [
   {
+    "role": "Full Stack Engineer",
+    "organisation": "Shelford Constructions Pty Ltd",
+    "startDate": "Mar 2026",
+    "endDate": "Present",
+    "summary": "Full Stack Engineer leading the modernisation of a legacy Microsoft Access and ASP.NET MVC system into a clean, scalable architecture using .NET 10 and Angular 21. Responsible for end-to-end delivery across backend API design, frontend SPA development, database migration, and CI/CD without disrupting live business operations.",
+    "techStack": ".NET 10, Angular 21, TypeScript, PrimeNG, Clean Architecture, CQRS, MediatR, Dapper, SQL Server, Microsoft Entra ID (MSAL), Azure OpenAI, GitHub Actions, xUnit, Vitest, Playwright, IIS, Windows Server",
+    "experiences": [
+      "Modernising a legacy Microsoft Access and ASP.NET MVC system into a scalable architecture using .NET 10 and Angular 21, replacing an outdated UI with a performant, component-driven SPA built on PrimeNG.",
+      "Architecting a Clean Architecture backend with domain driven design, CQRS/MediatR patterns, and Dapper with structured separation across Domain, Application, Infrastructure, and API layers.",
+      "Migrating and re-platforming an MSSQL database, preserving live integrations with XERO, Power BI, and active stored procedures without disrupting business operations.",
+      "Designing RESTful APIs secured with Microsoft Entra ID (MSAL), replacing direct database access patterns to improve maintainability and enable future integrations.",
+      "Establishing CI/CD pipelines using GitHub Actions with automated build, test (xUnit + Vitest), and deployment workflows targeting a Windows Server IIS environment.",
+      "Leading end-to-end modernisation strategy from legacy system analysis to greenfield architecture delivering full stack features including AI-powered job search using Azure OpenAI."
+    ],
+    "icon": "hardhat"
+  },
+  {
     "role": "Software Developer",
     "organisation": "Ocean Health Systems",
     "startDate": "Jan 2024",
-    "endDate": "Present",
-    "summary": "Software Developer delivering Microsoft Power Platform solutions including Canvas Apps and Power Automate to improve day to day healthcare operations. Also supports .NET and Angular applications with a focus on secure integration, data protection, and reliable delivery through Azure DevOps.",
-    "techStack": "Power Apps (Canvas), Power Automate, Power Fx, Angular 12–21, TypeScript, PrimeNG, Tailwind CSS, .NET 8, Wordpress, Webflow, Auth0, REST API, Azure DevOps, Playwright",
+    "endDate": "Mar 2026",
+    "summary": "Software Developer delivering Angular and .NET solutions for healthcare operations, with a focus on secure API integration, role-based access control, and automated testing. Also built Power Platform workflows to digitise internal processes and reduce manual overhead.",
+    "techStack": "Angular 12–21, TypeScript, PrimeNG, Tailwind CSS, .NET 8, Power Apps (Canvas), Power Automate, Power Fx, Auth0, REST API, Azure DevOps, Playwright, WordPress, Webflow",
     "experiences": [
-      "Reduced manual processing by digitising internal workflows using Canvas Apps.",
-      "Improved turnaround times by automating approvals, notifications, and system updates using Power Automate.",
-      "Applied role based access controls and audit logging to support secure handling of sensitive healthcare data.",
-      "Integrated with external systems including the Australian Immunisation Register (AIR) via REST APIs using Auth0 secured authentication.",
-      "Cut regression testing time by 40% by introducing Playwright E2E automation in Azure DevOps pipelines.",
-      "Integrated WordPress and Webflow with modern frontend workflows for scalable digital platforms.",
-      "Improved performance by 25% through Angular standalone migration and frontend optimisation."
+      "Migrated Angular applications to v21 using signals, reactive forms, and standalone components with lazy loading for improved performance.",
+      "Implemented caching strategies and HTTP interceptors for optimised API calls and error handling across frontend and backend layers.",
+      "Applied role-based access controls (RBAC) and audit logging to support secure handling of sensitive healthcare data with full traceability.",
+      "Integrated with external systems including the Australian Immunisation Register (AIR) via REST APIs using Auth0 secured authentication and token-based authorization.",
+      "Developed Power Automate flows for approvals, notifications, and system updates to improve turnaround times.",
+      "Established error logging and monitoring pipelines with structured exception handling to track system health and security events.",
+      "Cut regression testing time by 40% by introducing Playwright E2E automation in Azure DevOps pipelines."
     ],
     "icon": "hospital"
   },
@@ -25,11 +42,11 @@
     "summary": "Frontend Engineer within the Digital team delivering scalable customer portals for telecom and energy products, focused on UX, conversion, and API integration.",
     "techStack": "Angular, TypeScript, PrimeNG, Salesforce, MuleSoft, REST API, NgRx, Azure, GitHub, CI/CD",
     "experiences": [
-      "Developed and enhanced responsive sales funnels for mobile, broadband, and energy services, improving conversion rates and engagement.",
-      "Maintained and upgraded the MyDodo self-service portal, enabling customers to manage internet, mobile, and energy accounts seamlessly.",
-      "Integrated Salesforce CRM and MuleSoft REST APIs for synchronised customer, billing, and order data using OpenAPI specs.",
-      "Implemented UX and performance improvements that reduced support calls and boosted online retention.",
-      "Mentored junior developers and contributed to design discussions focusing on scalability, accessibility, and frontend best practices."
+      "Built and enhanced responsive sales funnels for mobile, broadband, and energy services, helping boost conversion rates by 12% and contributing to stronger customer acquisition.",
+      "Maintained and upgraded the MyDodo self-service portal serving 200K+ customers, making it easier for them to manage internet, mobile, and energy accounts without calling support.",
+      "Integrated Salesforce CRM and MuleSoft REST APIs for real-time customer, billing, and order synchronisation using OpenAPI specs, cutting data errors by over half.",
+      "Delivered UX and performance improvements that reduced support call volumes by 15–20% and helped improve customer retention through a smoother online experience.",
+      "Mentored junior developers and actively contributed to design discussions on scalability, accessibility, and frontend best practices."
     ],
     "icon": "building"
   },
@@ -45,6 +62,7 @@
       "Developed Angular components and responsive layouts ensuring accessibility across devices and browsers.",
       "Deployed and monitored production workloads on AWS Lambda and EC2, improving uptime and scalability.",
       "Integrated Node.js and .NET APIs for content management and authentication workflows with focus on security and performance.",
+      "Integrated WordPress and Webflow with modern frontend workflows for scalable, CMS-driven digital platforms.",
       "Optimised frontend performance by profiling components and reducing load times through asset compression and caching."
     ],
     "icon": "laptop"

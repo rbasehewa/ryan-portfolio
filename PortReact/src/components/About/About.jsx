@@ -13,6 +13,7 @@ import {
   faSeedling,
   faUser,
   faCheckCircle,
+  faHardHat,
 } from "@fortawesome/free-solid-svg-icons";
 import AboutTimeline from "./AboutTimeline";
 import styles from "./About.module.css";
@@ -37,6 +38,50 @@ export const About = () => {
         </div>
 
         <div className={styles.aboutItems} role="list">
+
+          {/* Shelford Constructions — current role */}
+          <div className={styles.aboutItem}>
+            <div className={styles.itemHeader}>
+              <span className={styles.iconWrap} aria-hidden="true">
+                <FontAwesomeIcon
+                  icon={faHardHat}
+                  size="lg"
+                  className={styles.icon}
+                />
+              </span>
+              <h3 className={styles.itemTitle}>
+                Shelford Constructions — Full Stack Engineer
+              </h3>
+            </div>
+
+            <div className={styles.itemBody}>
+              <div className={styles.achievement}>
+                <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
+                <p>Modernising a legacy Microsoft Access and ASP.NET MVC system into a scalable architecture using <strong>.NET 10</strong> and <strong>Angular 21</strong>, replacing an outdated UI with a performant, component-driven SPA built on PrimeNG.</p>
+              </div>
+              <div className={styles.achievement}>
+                <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
+                <p>Architecting a <strong>Clean Architecture</strong> backend with domain-driven design, <strong>CQRS/MediatR</strong> patterns, and Dapper — with structured separation across Domain, Application, Infrastructure, and API layers.</p>
+              </div>
+              <div className={styles.achievement}>
+                <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
+                <p>Migrating and re-platforming an MSSQL database, preserving live integrations with <strong>XERO</strong>, <strong>Power BI</strong>, and active stored procedures without disrupting business operations.</p>
+              </div>
+              <div className={styles.achievement}>
+                <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
+                <p>Designing <strong>RESTful APIs</strong> secured with <strong>Microsoft Entra ID (MSAL)</strong>, replacing direct database access patterns to improve maintainability and enable future integrations.</p>
+              </div>
+              <div className={styles.achievement}>
+                <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
+                <p>Establishing <strong>CI/CD pipelines</strong> using GitHub Actions with automated build, test (xUnit + Vitest), and deployment workflows targeting a Windows Server IIS environment.</p>
+              </div>
+              <div className={styles.achievement}>
+                <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
+                <p>Leading end-to-end modernisation strategy — from legacy system analysis to greenfield architecture — delivering full-stack features including AI-powered job search using <strong>Azure OpenAI</strong>.</p>
+              </div>
+            </div>
+          </div>
+
           {/* Ocean Health Systems */}
           <div className={styles.aboutItem}>
             <div className={styles.itemHeader}>
@@ -187,6 +232,7 @@ export const About = () => {
               Proud dad of two <FontAwesomeIcon icon={faUserGroup} aria-hidden="true" />. I recharge through cycling <FontAwesomeIcon icon={faBicycle} aria-hidden="true" /> and gardening <FontAwesomeIcon icon={faSeedling} aria-hidden="true" />, which keep my creativity grounded and energy balanced outside of development.
             </p>
           </div>
+
         </div>
       </div>
     </section>
